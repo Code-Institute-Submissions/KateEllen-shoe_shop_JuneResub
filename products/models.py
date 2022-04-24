@@ -1,5 +1,7 @@
 from django.db import models
 
+from django.db import models
+
 class Category(models.Model):
     name = models.CharField(max_length=250)
     friendly_name = models.CharField(max_length=250, null=True, blank=True)
@@ -23,5 +25,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
 
 

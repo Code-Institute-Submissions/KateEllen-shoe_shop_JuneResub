@@ -1,0 +1,16 @@
+[{
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "name": "Air Force 1 Pixel Trainers",
+      "description": "Classic Air Force 1 silhouette gets another upgrade, this time inspired by technology and glitches - hence the name. ",
+      "has_sizes": true,
+      "price": 110.0,
+      "rating": 4.6,
+      "category": 1,
+      "image_url": "https://i8.amplience.net/i/jpl/jd_400015_a?qlt=92&w=750&h=957&v=1&fmt=webp",
+      "image": "jd_400015_a.jpg"
+    }
+  }
+
+]
