@@ -11,6 +11,66 @@
       "image_url": "https://i8.amplience.net/i/jpl/jd_400015_a?qlt=92&w=750&h=957&v=1&fmt=webp",
       "image": "jd_400015_a.jpg"
     }
+  },
+
+  {
+  "pk": 1,
+  "model": "products.product",
+  "fields": {
+    "name": "Converse All Star Low Trainers",
+    "description": "The low-cut legend since '57. The Chuck Taylor All Star Low Top sneaker keeps it classic. This iteration comes in a pink clay colourway. Perfect for day to day activities, providing long lasting comfort.",
+    "has_sizes": true,
+    "price": 54.99,
+    "rating": 4.6,
+    "category": 1,
+    "image_url": "https://i8.amplience.net/i/jpl/jd_400015_a?qlt=92&w=750&h=957&v=1&fmt=webp",
+    "image": "jd_400015_a.jpg"
   }
+},
+
+{
+  "pk": 1,
+  "model": "products.product",
+  "fields": {
+    "name": "Adidas Ultraboost",
+    "description": "These shoes have a soft knit upper that offers ventilation where you need it most. They ride on our original tooling, with a Boost midsole for comfort you need to feel to believe.",
+    "has_sizes": true,
+    "price": 160,
+    "rating": 4.6,
+    "category": 1,
+    "image_url": "https://i8.amplience.net/i/jpl/jd_400015_a?qlt=92&w=750&h=957&v=1&fmt=webp",
+    "image": "jd_400015_a.jpg"
+  }
+},
+
+{
+  "pk": 1,
+  "model": "products.product",
+  "fields": {
+    "name": "VEJA",
+    "description": "VEJA has been creating sneakers differently since 2005, mixing social projects, economic justice and ecological materials. A minimalistic, simple retro silhouette with a sustainable punch. Featuring ChromeFree leather uppers and panels, logo V made of rubber, recycled polyester lining and wild rubber sole from the Amazonian forest. In a black and white colourway.",
+    "has_sizes": false,
+    "price": 120,
+    "rating": 4.6,
+    "category": 1,
+    "image_url": "https://i8.amplience.net/i/jpl/jd_400015_a?qlt=92&w=750&h=957&v=1&fmt=webp",
+    "image": "jd_400015_a.jpg"
+  }
+},
+
+{
+  "pk": 1,
+  "model": "products.product",
+  "fields": {
+    "name": "Run Star Motion Trainers by Converse",
+    "description": "Mirroring the city streets and built for movement, these Run Star Motion Trainers are made from a lugged rubber sole and heel. Also constructed from a completely organic canvas upper and a comfortable CX foam insole. In a bright orange colourway.",
+    "has_sizes": true,
+    "price": 105,
+    "rating": 4.6,
+    "category": 1,
+    "image_url": "https://i8.amplience.net/i/jpl/jd_400015_a?qlt=92&w=750&h=957&v=1&fmt=webp",
+    "image": "jd_400015_a.jpg"
+  }
+}
 
 ]
