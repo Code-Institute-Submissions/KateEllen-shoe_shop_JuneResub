@@ -12,38 +12,38 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="heels-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Heels
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">High Heel</a>
-                <a href="" class="dropdown-item">Kitten Heel</a>
-                <a href="" class="dropdown-item">Wedges</a>
-                <a href="" class="dropdown-item">All Heels</a>
+            <div class="dropdown-menu border-0" aria-labelledby="heels-link">
+                <a href="{% url 'products' %}?category=high_heels" class="dropdown-item">High Heels</a>
+                <a href="{% url 'products' %}?category=kitten_heels" class="dropdown-item">Kitten Heels</a>
+                <a href="{% url 'products' %}?category=wedges" class="dropdown-item">Wedges</a>
+                <a href="{% url 'products' %}?category=high_heels,kitten_heels,wedges" class="dropdown-item">All Heels</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="flats-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Flats
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Trainers</a>
-                <a href="" class="dropdown-item">Pumps</a>
-                <a href="" class="dropdown-item">Sandals</a>
-                <a href="" class="dropdown-item">All Flats</a>
+            <div class="dropdown-menu border-0" aria-labelledby="flats-link">
+                <a href="{% url 'products' %}?category=trainers" class="dropdown-item">Trainers</a>
+                <a href="{% url 'products' %}?category=pumps" class="dropdown-item">Pumps</a>
+                <a href="{% url 'products' %}?category=sandals" class="dropdown-item">Sandals</a>
+                <a href="{% url 'products' %}?category=trainers,pumps,sandals" class="dropdown-item">All Flats</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="boots-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Boots
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Winter Boots</a>
-                <a href="" class="dropdown-item">Fashion boots</a>
-                <a href="" class="dropdown-item">Work Boots</a>
-                <a href="" class="dropdown-item">All Boots</a>
+            <div class="dropdown-menu border-0" aria-labelledby="boots-link">
+                <a href="{% url 'products' %}?category=winter_boots" class="dropdown-item">Winter Boots</a>
+                <a href="{% url 'products' %}?category=fashion_boots" class="dropdown-item">Fashion boots</a>
+                <a href="{% url 'products' %}?category=work_boots" class="dropdown-item">Work Boots</a>
+                <a href="{% url 'products' %}?category=winter_boots,fashion_boots,work_boots" class="dropdown-item">All Boots</a>
             </div>
         </li>
 
@@ -52,10 +52,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
