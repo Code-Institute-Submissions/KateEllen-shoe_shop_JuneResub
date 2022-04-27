@@ -6,6 +6,114 @@
             "name": "trainers",
             "friendly_name": "trainers"
         }
+    },
+
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "pumps",
+            "friendly_name": "pumps"
+        }
+    },
+
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "sandals",
+            "friendly_name": "sandals"
+        }
+    },
+
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "pumps",
+            "friendly_name": "pumps"
+        }
+    },
+
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "high_heels",
+            "friendly_name": "high heels"
+        }
+    },
+
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "kitten_heel",
+            "friendly_name": "kitten heel"
+        }
+    },
+
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "wedges",
+            "friendly_name": "wedges"
+        }
+    },
+
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "winter_boots",
+            "friendly_name": "winter boots"
+        }
+    },
+
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "fashion_boots",
+            "friendly_name": "fashion boots"
+        }
+    },
+
+    {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+            "name": "work_boots",
+            "friendly_name": "work boots"
+        }
+    },
+
+    {
+        "pk": 11,
+        "model": "products.category",
+        "fields": {
+            "name": "new_arrivals",
+            "friendly_name": "new arrivals"
+        }
+    },
+
+    {
+        "pk": 12,
+        "model": "products.category",
+        "fields": {
+            "name": "deals",
+            "friendly_name": "deals"
+        }
+    },
+
+    {
+        "pk": 13,
+        "model": "products.category",
+        "fields": {
+            "name": "clearance",
+            "friendly_name": "clearance"
+        }
     }
 ]
 
