@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-cy2n&8c(nryx-&f)y80^e!!!+@=7pas&iu-y$@=^#ayesh855_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['funky-feet.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -107,12 +107,17 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'FunkyFeet.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.enviorn:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 
