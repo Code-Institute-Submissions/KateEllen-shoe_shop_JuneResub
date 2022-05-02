@@ -1,1 +1,1 @@
-web: gunicorn shoe_shop.wsgi:application
+web: gunicorn FunkyFeet.wsgi:application
