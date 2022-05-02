@@ -82,7 +82,7 @@ def adjust_bag(request, item_id):
     return redirect(reverse('view_bag'))
 
 
-def remove_bag (request, item_id):
+def remove_from_bag (request, item_id):
 
     """ Remove the item from the shopping bag """
 
