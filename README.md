@@ -1,4 +1,4 @@
-<h1> Styx Shoes </h1>
+<h1> Funky Feet </h1>
 
 **View a live version of the site [here]().**
 
