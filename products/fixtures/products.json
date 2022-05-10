@@ -8,8 +8,8 @@
       "price": 110.0,
       "rating": 4.6,
       "category": 1,
-      "image_url": "{% static 'media/Air-Force-1-Pixel-Trainers.png %}",
-      "image": "jd_400015_a.jpg"
+      "image_url": "https://cdn.media.amplience.net/i/office/4077215605_sd1.jpg?$newhighres$$w=569&h=497&fmt=auto&qlt=default&fmt.jpeg.interlaced=true",
+      "image": "Air-Force-1-Pixel-Trainers.png"
     }
   },
 
