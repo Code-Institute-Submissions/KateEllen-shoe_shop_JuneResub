@@ -105,6 +105,38 @@
             </div>
         </div>
     </div>
+
+    {% if user.is_authenticated %}
+  <!-- Comments -->
+<div class="container ">
+    <h2>Leave a Review</h2>
+    <br />
+
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="col{% if s %}-12 mt-2{% endif %}">
+                <a href="{% url 'add_review' %}" class="btn btn-outline-black rounded-0 mt-5">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Add Review</span>
+                </a>
+                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+            </div>
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
+    </div>
+
+    {% else %}
+      <!-- Re-direct user to sign up option if not logged in  -->
+    <div class="container text-center register-warning">
+        <h3>You're not allowed here.. <a class="btn" href="{% url 'account_signup' %}">Sign up</a></h3>
+    </div>
+
+    {% endif %}
+</div>
 {% endblock %}
 
 {% block postloadjs %}
