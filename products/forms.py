@@ -1,10 +1,10 @@
 from django import forms
-from .models import Review
+from .models import Comment
 
 
-class ReviewForm(forms.ModelForm):
+class CommentForm(forms.ModelForm):
     class Meta:
-        model = Review
+        model = Comment
         fields = ('name', 'body')
 
         widgets = {

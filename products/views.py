@@ -2,10 +2,10 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from django.views.generic import CreateView
+from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
-from .forms import ReviewForm
-from .models import Product, Category, Review
+from .forms import CommentForm
+from .models import Product, Category, Comment
 
 # Create your views here.
 
@@ -72,9 +72,9 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-def add_review (CreateView):
-    model = Review
-    form_class = ReviewForm
+class AddReviewView(CreateView):
+    model = Comment
+    form_class = CommentForm
     template_name = 'products/add_review.html'
     success_url = reverse_lazy('home')
 
