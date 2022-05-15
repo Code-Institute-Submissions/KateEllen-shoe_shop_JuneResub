@@ -81,7 +81,7 @@ def add_product(request):
         'form' : form,
     }
 
-    return render(requestm templatem context)
+    return render(request, template, context)
 
 class AddReviewView(CreateView):
     model = Comment
