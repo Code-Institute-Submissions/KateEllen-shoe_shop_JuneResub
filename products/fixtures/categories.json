@@ -30,8 +30,8 @@
         "pk": 4,
         "model": "products.category",
         "fields": {
-            "name": "pumps",
-            "friendly_name": "pumps"
+            "name": "high_heels",
+            "friendly_name": "high heels"
         }
     },
 
@@ -39,22 +39,13 @@
         "pk": 5,
         "model": "products.category",
         "fields": {
-            "name": "high_heels",
-            "friendly_name": "high heels"
+            "name": "kitten_heels",
+            "friendly_name": "kitten heels"
         }
     },
 
     {
         "pk": 6,
-        "model": "products.category",
-        "fields": {
-            "name": "kitten_heel",
-            "friendly_name": "kitten heel"
-        }
-    },
-
-    {
-        "pk": 7,
         "model": "products.category",
         "fields": {
             "name": "wedges",
@@ -63,7 +54,7 @@
     },
 
     {
-        "pk": 8,
+        "pk": 7,
         "model": "products.category",
         "fields": {
             "name": "winter_boots",
@@ -72,7 +63,7 @@
     },
 
     {
-        "pk": 9,
+        "pk": 8,
         "model": "products.category",
         "fields": {
             "name": "fashion_boots",
@@ -81,16 +72,7 @@
     },
 
     {
-        "pk": 10,
-        "model": "products.category",
-        "fields": {
-            "name": "work_boots",
-            "friendly_name": "work boots"
-        }
-    },
-
-    {
-        "pk": 11,
+        "pk": 9,
         "model": "products.category",
         "fields": {
             "name": "new_arrivals",
@@ -99,7 +81,7 @@
     },
 
     {
-        "pk": 12,
+        "pk": 10,
         "model": "products.category",
         "fields": {
             "name": "deals",
@@ -108,7 +90,7 @@
     },
 
     {
-        "pk": 13,
+        "pk": 11,
         "model": "products.category",
         "fields": {
             "name": "clearance",
