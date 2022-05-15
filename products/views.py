@@ -4,7 +4,8 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
-from .forms import CommentForm
+
+from .forms import CommentForm, ProductForm
 from .models import Product, Category, Comment
 
 # Create your views here.
@@ -71,6 +72,16 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form' : form,
+    }
+
+    return render(requestm templatem context)
 
 class AddReviewView(CreateView):
     model = Comment
