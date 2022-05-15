@@ -4,7 +4,7 @@
 
 This project has been created for educational purposes.
 
-It is an E-Commerce site for a fictional company 'Funky Feet' which offers a variety of shoes for sale.
+It is an E-Commerce site for a fictional company 'Funky Feet' which offers a variety of ladies shoes for sale.
 
 ![Responsive]()
 ___
