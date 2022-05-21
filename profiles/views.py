@@ -14,7 +14,7 @@ def profile(request):
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
-        form = UserProfilePost(request.POST, instance=profile)
+        form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile sucessfully updated!')
@@ -27,8 +27,8 @@ def profile(request):
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'order': orders,
-        'on_profile_page': True,
+        'orders': orders,
+        'on_profile_page': True
     }
 
     return render(request, template, context)
@@ -44,7 +44,7 @@ def order_history(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
-        'from_profile': True, 
+        'from_profile': True,
     }
 
     return render(request, template, context)
