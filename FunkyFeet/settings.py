@@ -180,6 +180,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
+    #Cache Control
+    AWS_S3_OBJECT_PARAMETES = {
+        'Expires': 'Thu, 31 DEC 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000'
+    }
+
     #Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'funky-feet'
     AWS_S3_REGION_NAME = 'eu-west-1'

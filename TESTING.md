@@ -1,4 +1,4 @@
- # Styx - Testing
+# Testing
 
 [View the live project here.](https://funky-feet.herokuapp.com/)
 
