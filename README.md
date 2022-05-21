@@ -17,7 +17,7 @@ ___
 
 ## Project Goals
 
-The goal of this project is to create E*Commerce store mininum viable product (MVP) for a shoe shop. 
+The goal of this project is to create E*Commerce store for a ladies shoe shop. 
 This project is for educational purposes only.
 
 ### Importance and Feasibility chart
@@ -47,12 +47,12 @@ This project is for educational purposes only.
 
 * As a **Registered User**, I want to be able to easily login and logout of my account.
 * As a **Registered User**, I want to be able to easily add and remove items in my shopping bag.
-* As a **Registered User**, I want to be able to easily purchase items on my shopping bac.
+* As a **Registered User**, I want to be able to easily purchase items on my shopping bag.
 * As a **Registered User**, I want to receive a purchase confirmation email.
 * As a **Registered User**, I want to be able to easily update my contact and delivery information.
 * As a **Registered User**, I want to be able to view my previous orders.
-* As a **Registered User**, I want to be able read the blog. 
-* As a **Registered User**, I want to be able comment on the blog entries.
+* As a **Registered User**, I want to be able to leave a review.
+* As a **Registered User**, I want to be able to midify my review.
 
 ### Site Owner/Superuser goals
 

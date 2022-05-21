@@ -20,7 +20,7 @@ Add a review to product
     {% else %}
       <!-- Re-direct user to sign up option if not logged in  -->
     <div class="container text-center register-warning">
-        <h3>You're not allowed here.. <a class="btn" href="{% url 'account_signup' %}">Sign up</a></h3>
+        <h3>You need to sign up to leave a review! <a class="btn" href="{% url 'account_signup' %}">Sign up</a></h3>
     </div>
 
     {% endif %}
