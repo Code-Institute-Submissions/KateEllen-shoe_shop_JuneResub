@@ -1,16 +1,19 @@
 from django import forms
-from .models import Comment, Product, Category
+
+from .models import Review, Product, Category
 
 
-class CommentForm(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
     class Meta:
-        model = Comment
-        fields = ('name', 'body')
+        model = Review
+        fields = (
+           'product_id',
+'review_title',
+'review_content',
+'review_date_posted',
+'review_author'
+        )
 
-        widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'body': forms.Textarea(attrs={'class': 'form-control'}),
-        }
 
 class ProductForm(forms.ModelForm):
 

@@ -1,4 +1,7 @@
 from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import User
+
 
 class Category(models.Model):
 
@@ -25,16 +28,18 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
 
+
     def __str__(self):
         return self.name
 
-class Comment(models.Model):
-    product = models.ForeignKey(
-        Product, related_name="review", on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
+class Review(models.Model):
+    product_id = models.ForeignKey('Product', null=True, related_name="products", blank=True, on_delete=models.SET_NULL)
+    review_title = models.CharField(max_length=50)
+    review_content = models.TextField(max_length=500)
+    review_date_posted = models.DateTimeField(default=timezone.now)
+    review_author = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL,related_name='review')
+
 
     def __str__(self):
-        return '%s -%s' % (self.post, self.name)
+        return self.review
 

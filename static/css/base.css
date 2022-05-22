@@ -260,5 +260,78 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+   }
+}
+
+
+
+/* Main styles */
+
+
+.home-main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 40px;
+}
+
+.home-title {
+    position: absolute;
+    font-size: 15rem;
+    font-weight: 1000;
+    right: -250px;
+    top: 0;
+    z-index: 2;
+    color: black;
+}
+
+.home-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.home-right {
+    position: relative;
+    padding-top: 140px;
+}
+
+.home-main p {
+    margin-right: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+}
+
+.home-main a {
+    color: #000;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 1200px) {
+    .home-main {
+        display: block;
+    }
+
+    .home-title {
+        position: relative;
+        font-size: 10rem;
+        font-weight: 1000;
+        right: auto;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        color: black;
+    }
+
+    .home-main p {
+        margin-bottom: 20px;
+    }
+
+    .home-right {
+        margin-top: 20px;
+        padding-top: 0;
     }
 }

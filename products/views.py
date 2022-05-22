@@ -6,8 +6,8 @@ from django.db.models.functions import Lower
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 
-from .forms import CommentForm, ProductForm
-from .models import Product, Category, Comment
+from .forms import ReviewForm, ProductForm
+from .models import Product, Category, Review
 
 # Create your views here.
 
@@ -80,8 +80,8 @@ def add_product(request):
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+    if request.method == 'review':
+        form = ProductForm(request.review, request.FILES)
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
@@ -106,8 +106,8 @@ def edit_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, instance=product)
+    if request.method == 'review':
+        form = ProductForm(request.review, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             messages.success(request, 'Product successfully updated!')
@@ -137,13 +137,37 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted successfully!')
     return redirect(reverse('products'))
 
+@login_required
+def add_review(request, product_id):
+    """ Returns .html """
+    # product = get_object_or_404(Product, pk=product_id)
+    # reviews = product.reviews
+    new_review = None
+    if request.method == 'POST':
+        review_form = ReviewForm(data=request.POST)
+        if review_form.is_valid():
+            """ Create Comment """
+            new_review = review_form.save(commit=False)
+            """ Assign Author To Comment """
+            new_review.comment_author = request.user
+            new_review.save()
+            """ Assign Comment to Post """
+            # new_review.product_id = product
+            new_review.save()
+            review_form = ReviewForm()
+            messages.success(request, 'Successfully posted your comment.')
+            return redirect(reverse('products'))
+    else:
+        review_form = ReviewForm()
 
-class AddReviewView(CreateView):
-    model = Comment
-    form_class = CommentForm
-    template_name = 'products/add_review.html'
-    success_url = reverse_lazy('home')
+    template = 'products/add_review.html'
 
-    def form_valid(self, form):
-        form.instance.product_id = self.kwargs['pk']
-        return super().form_valid(form)
+
+    context = {
+        # 'product': product,
+        # 'reviews': reviews,
+        'review_form': review_form,
+        'on_profile_page': True
+    }
+
+    return render(request, template, context)
