@@ -81,18 +81,24 @@ To validate the code the following **validation services** and **linters** were 
     - Special Offers gives a dropdown option, each individual category can be sleceted showing the correct category.
 
  * Clicking 'My Account' icon option brings you to your profile and give you the option to sign out.
-  * Clicking 'Shopping Bag' icon brings you to your shopping bag.
+ * Clicking 'Shopping Bag' icon brings you to your shopping bag.
 
 **Search Bar:** 
+ * The search bar was tested by using not relevant search terms so it displayed ''.
+ * The search bar generates results based on user input. Results are listed underneath. Words that are relevant to the site were searched all returning the correct information.
+**Product Page:**   
 
 **Product Page:** 
-
+ * Clicking the 'Sort by' dropdown allows you to sort products by price (A-Z) (Z-A) and category (A-Z) (Z-A).
+ * Clicking an item in the product page will bring you to the item selected. 
 
 **Register Page:** 
-
+ * The form fields have validation, it was tested using correct and incorrect input, receiving the expected output. 
+ * Clicking the back to login links take the user back to the login page.
+ * Clicking the register button will trigger an email to be sent to the used email address requesting to confirm their email address, once verified the user will be returned to the main page.
 
 **All products - Dropdown** 
-
+ *
 
 **All products Page - Via Shop Link** 
 
@@ -105,23 +111,6 @@ To validate the code the following **validation services** and **linters** were 
 **Product Management** 
 
 
-**Explore page - Via Explore Nav Link** 
-
-**Explore Details** 
-
-
-**Edit Post Button** 
-
-
-**Explore Management** 
-
-
-**Edit Comment Button** 
-
-
-**Add Comment** 
-
-
 **My Account Dropdown** 
 
 
@@ -132,11 +121,6 @@ To validate the code the following **validation services** and **linters** were 
 
 
 **Checkout Page** 
-
-
-**Thank You page** 
-
-
 
 **Subscription:** 
 
