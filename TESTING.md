@@ -71,20 +71,17 @@ To validate the code the following **validation services** and **linters** were 
 
 ### Features tested
 
-**Notes about the testing performed:**
-  * A super user and regular user account were created to test the elements only accessible to superusers stays hidden to regular users.
-  * All buttons, forms and links were clicked and tested for responses, all form fields were filled out and responded as expected, all features were used and tested with appropriate responses given as a logged in user, superuser and unregistered user.
-  * All buttons were tested by the developer to check that they responded correctly and displayed the correct information.
-  * All links were tested by the developer to check they lead to the correct endpoints and gave the correct responses.
-  * All items and their categories categories were tested by the developer to check that it responded correctly and displayed the correct information.
-  * All forms were tested by the developer by filling them out using the wrong inputs to test validation and user feedback, which worked as expected. A red underline and text box appears alerting the user to the mistake.
-  * Edit forms were tested by changing the  the information and viewing those changes on the pages affected. Edit forms were also already filled with the current information if the user chose to let their data to be stored. 
-  * All 'Delete' buttons delete the appropriate information and take users back to the all products page, and explore page.
-  * The back to top button takes the user to the top of the current page and has been tested and reponded as expected on every page.
-  * Toasts give the user real time feed back on their inputs and are visiable with bold, clean text to grab the users attention. They show at the approprite time and with the correct text when diferent actions are performed.
-
 **Home Page:**
- 
+ * Clicking 'Funky Feet' log brings you to the homepage. 
+ * Clicking menu options brings you to the correct cateogry. 
+    - All shoes gives a dropdown option, each individual category can be sleceted showing the correct category.
+    - Heels gives a dropdown option, each individual category can be sleceted showing the correct category.
+    - Flats gives a dropdown option, each individual objecategoryct can be sleceted showing the correct category.
+    - Boots gives a dropdown option, each individual category can be sleceted showing the correct category.
+    - Special Offers gives a dropdown option, each individual category can be sleceted showing the correct category.
+
+ * Clicking 'My Account' icon option brings you to your profile and give you the option to sign out.
+  * Clicking 'Shopping Bag' icon brings you to your shopping bag.
 
 **Search Bar:** 
 
