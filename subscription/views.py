@@ -7,12 +7,12 @@ from subscription.models import Signup
 import json
 import requests
 
-url = 'https://api.convertkit.com/v3/forms/2632824/subscribe'
+url = 'https://api.convertkit.com/v3/forms/3294610/subscribe'
 
 
 def subscribe(email):
     """
-    View for handling sending the subscription to mailchimp
+    View for handling sending the subscription to Converkit
     """
     newData = {
         'api_key': settings.CONVERKIT_API_KEY,
@@ -36,6 +36,7 @@ def email_list_signup(request):
         if signUpForm.is_valid():
             email = request.POST.get('email')
             response = subscribe(email)
+            print(response)
             if response['subscription'] and response['subscription']['state'] == 'inactive':
                 messages.success(
                     request, "Subscribed, please confirm your email.")
