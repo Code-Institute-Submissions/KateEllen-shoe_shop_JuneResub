@@ -1,3 +1,6 @@
+:root {
+    --secondary-color: #FFC108
+}
 html {
     height: 100%;
 }
@@ -193,22 +196,25 @@ input[name='q']::placeholder {
   
   #delivery-banner {
     height: 30px;
-    background-color: var(--default-blue);
+    background-color: var( --secondary-color);
   }
   
   #delivery-banner h4 {
     margin: auto;
     padding: 15px;
     font-size: large;
-    background-color: var(--default-blue);
+    background-color: var( --secondary-color);
   
   }
   
   #signupButton {
-    background-color: var(--default-blue) !important;
-    color: #fff;
-    border: solid var(--default-blue);
-  
+    background-color: var( --secondary-color) !important;
+    color: #000;
+    border: solid var( --secondary-color);
+    border-radius: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #newsletter-banner {
@@ -217,7 +223,6 @@ input[name='q']::placeholder {
   
   .signupForm > input[name=email] {
     width: 150px;
-    border-radius: 8px 0 0 8px !important;
   }
   
   input[name=email] {
@@ -250,7 +255,7 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content input {
     border-color: #000;
-    border-radius: 0;
+
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -278,7 +283,6 @@ input[name='q']::placeholder {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
 
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
