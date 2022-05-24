@@ -169,10 +169,9 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 
 ## Future features 
-
-
-
-
+* Returns
+* Product rating
+* Live chat
 
 # Testing
 
@@ -215,6 +214,7 @@ Facebook cover photo - [Canva](https://www.canva.com/)
 * [Boutique Ado](https://github.com/ckz8780/ci-fsf-hello-django/tree/c13b414fd2e87a54b4f2788ceffec55be4ade925)
 * [Office](https://www.office.co.uk/)
 * [StackOverflow](https://stackoverflow.com/)
+* [Coolors](https://coolors.co/)
 
 
 ### I received advice and support from
