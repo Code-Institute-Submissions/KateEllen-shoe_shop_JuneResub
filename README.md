@@ -193,22 +193,33 @@ It's required to have an [AWS](https://aws.amazon.com/s3/) account and a [S3 buc
 
 5. Now make some changes to the code you just clined and deploy them to Heorku using Git. You can do this by typing "git add ." followed by "git commit -m 'commit message' " then you will finally type "git push heroku main" to deploy to Heorku. This is all done in your local terminal. 
 
+6. When your app is deployed successfully. Click _Open App_ in to top right hand corner of Heroku to open app in a new tab in the browser.
+
 
 
 # Credits
 
 ## Content 
-
+* Products info and pictures - [Office](https://www.office.co.uk/)
+* Wireframes - [Balsamiq](https://balsamiq.com/wireframes/)
 
 ## Media 
-
+Images - [Office](https://www.office.co.uk/)
+Facebook cover photo - [Canva](https://www.canva.com/)
+* [Font-Awesome](https://fontawesome.com/)
 
 
 ## Acknowledgements
 
 ### I received inspiration for this project from:
-
+* [Boutique Ado](https://github.com/ckz8780/ci-fsf-hello-django/tree/c13b414fd2e87a54b4f2788ceffec55be4ade925)
+* [Office](https://www.office.co.uk/)
+* [StackOverflow](https://stackoverflow.com/)
 
 
 ### I received advice and support from
+* [Niall Maher](https://www.linkedin.com/in/nialljoemaher/?originalSubdomain=ie)
+* Code Institute [Slack Community](code-institute-room.slack.com)
+* My mentor Malia was a huge help in this project as always. She constantly steered me in the right direction and helped me with my many questions on queries. 
+
 
