@@ -220,21 +220,26 @@ input[name='q']::placeholder {
   #newsletter-banner {
     padding-top: 10px;
   }
-  
-  .signupForm > input[name=email] {
-    width: 150px;
-  }
-  
-  input[name=email] {
-    color: #aab7c4
-  }
-  
-  .contact-link {
-    padding-bottom: 20px;
-  }
-  .contact-link > a {
+
+  .social-networks p {
     color:#fff;
   }
+
+.social-networks li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 200%;
+    margin: 1%;
+    padding: 5%;
+    color: #fff;
+}
+
+.social-networks a:hover i {
+    transform: rotate(-15deg) scale(2);
+    color: white;
+}
   /********************************************* End footer */
 
 /* -------------------------------- Media Queries */
