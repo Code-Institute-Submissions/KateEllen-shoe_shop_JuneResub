@@ -104,9 +104,6 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 ![Color-palette]()
 
-### Font
-
-
 
 
 # Database Schema 
@@ -183,11 +180,18 @@ The full testing performed can be found [here](./TESTING.md)
 
 
 # Deployment 
-## Local Deployment
-
-
-
 ## Heroku Deployment
+It's required to have an [AWS](https://aws.amazon.com/s3/) account and a [S3 bucket](https://aws.amazon.com/s3/) to hold all the static files for this project.
+
+1. Open and login to [Heroku](https://id.heroku.com/login)
+
+2. Add all of your Config Vars. Such as keys for AWS, Stripe, Secret Key, Database URL and Email keys. 
+
+3. In your local terminal type "heroku login"
+
+4. Use git to clone your repository's sorce code to your local machine. You can do this by typing "heroku git:clone -a (REPO NAME) then cd (REPO NAME) into yout terminal.
+
+5. Now make some changes to the code you just clined and deploy them to Heorku using Git. You can do this by typing "git add ." followed by "git commit -m 'commit message' " then you will finally type "git push heroku main" to deploy to Heorku. This is all done in your local terminal. 
 
 
 
