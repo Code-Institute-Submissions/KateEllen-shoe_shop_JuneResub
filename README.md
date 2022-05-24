@@ -100,7 +100,7 @@ The final result is slightly different as during the development stage the way t
 
 ### Colours
 
-The palette of colors for the site is simple, the main color is a shade of black
+The palette of colors for the site is simple, the main colors are black and white. I added a pop of yellow to catch the eye. 
 
 ![Color-palette]()
 
