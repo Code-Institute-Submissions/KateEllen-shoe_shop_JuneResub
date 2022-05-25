@@ -121,18 +121,44 @@ To validate the code the following **validation services** and **linters** were 
 * Users are notified of the successor if there is any errors so the request couldn't be processed.
 
 **Product Management** 
-
+* Only super users have access to this page (found in My Account dropdown), and it was tested by creating a regular user.
+* Clicking the 'Add' buttons add the entered information to the database before taking the user back to the products details page.
+* The form fields have validation, tested using correct and incorrect information with the expected responses given.
+* Users can select a new image from the computers files via the select button or add an image using the image url field.
+* Clicking the 'Cancel' buttons take the user back to their respective details page without making changes as expected.
+* Users are notified of the success of this or if there's been an error.
 
 **My Account Dropdown** 
-
+* In 'My Account' dropdown, when logged in, shows relevant information depending on if it a superuser or not, with superusers getting the Product Management option, alongside the profile and logout links. Tested both using superuser and nonsuperuser credentials.
+* Unregistered users and users not logged in will see product and register links. Tested using superuser and nonsuperuser credentials.
 
 **Profile Page** 
+* The users username appears at the top as programmed with their email displayed underneath.
+  * The profile page shows the users username and email address with a table containing their previous orders and current delivery information.
+  * Clicking the order numbers, in the order history table, redirects users to order confirmation page with all the information available in that order. A reminder toast message appears to remind the user they are viewing an old order 
+  is also displayed, with a link which takes users back to the profile page.
+  * The current delivery information section has different fields that can be edited with updated information after clicking the update information button.
+  If the user is logged in their information will automatically populate.
+  The form has validation.
+  * This page is only accessible if the user is logged in, it was tested using a username that wasn't logged in.
 
-
-**Shopping bag** 
-
+* The Bag icon in the navbar takes the user to their shopping bag. There they will find a list of all the products added to it, as well as important information. If the bag is empty
+  users will receive a notification in a toast, alongside a link which directs them to the all products page. This was tested by clicking the empty bag and clicking the bag with items inside and viewing the reults, which were as stated.
+  * Users who have items in their bag will be faced with the option to update item amounts and delete items from their bag. Both the plus and minus buttons update the number in the box field, and the update and delete buttons update the subtotal, bag total, delivery and grand total to reflect the changes.
+  If all the items are removed from the bag, users will be directed to a page stating that their bag is empty and a link which takes them to the all products page.
+  * Clicking the continue shopping link directs users to the all products page.
+  * Clicking the checkout button takes users to the checkout page where they find an order summary alongside an order form. 
 
 **Checkout Page** 
+  * All form fields work as intended and have form validation in case the user doesn't fill the information in the correct way.
+  * Clicking the 'Save delivery info to profile' box, saves just the delivery sections users details to their profile page, which can be accessed via the 'My Account' dropdown. If the user has information saved to their profile, the delivery form fields will be automatically generated with the stored information. This was tested by changing the product information.
+  * Clicking the bag link takes users back to their bag.
+  * Clicking the checkout button generates the payment through stripe, adding the order to the admin section of the site and the users profile page. This was tested using multiple users and making orders then viewing the reults.
+  * The 'warning card is about to be debited' message updates with the bag user entries such as updating the amount of product and was tested by doing so.
+
+**Thank You page** 
+* When users have checked out and paid, they are directed to a confirmation page with a copy of their order and a link which directs the to the Latest Deals page. 
+It will also display a toast message with all the details. 
 
 **Subscription:** 
 * The subscription form is available in all the pages. 
