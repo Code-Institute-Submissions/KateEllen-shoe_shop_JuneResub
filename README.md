@@ -109,6 +109,9 @@ The palette of colors for the site is simple, the main colors are black and whit
 ## Existing Features 
 
 ### Features in all apps
+* Toast Messages, which are pop up messages appear. The toast messages will notify the user when an action has been successful or unsuccessful. These messages can be dismissed by the user by clicking the x button.
+![Footer](https://github.com/KateEllen/shoe_shop/blob/main/media/order-success.png)
+
 * Navbar 
   * Contains the site name, My Account dropdown, Shopping bag, Search bar, all shoes, boots, heels, trainers, flats and special offers.
   * My Profile and Logout links. Logged in superusers will also find the Manage Products.
@@ -116,30 +119,65 @@ The palette of colors for the site is simple, the main colors are black and whit
   * The search function allows users to input keywords that filter the content to meet the inputed criteria.
 
 * Funky Feet Logo 
-  * A clickable link that brings you back to the homepage. 
+  * A clickable link that brings you back to the homepage.
 
-![Nav bar and Logo](https://github.com/KateEllen/shoe_shop/blob/main/media/nav-and-logo.png)
+![Nav and Logo](https://github.com/KateEllen/shoe_shop/blob/main/media/nav-and-logo.png)
 
 ### Footer 
   * Subscribe, so the users can sign up for the NewsLetter.
   * Facebook link. 
-  ![Nav bar and Logo](https://github.com/KateEllen/shoe_shop/blob/main/media/nav-and-logo.png)
-  
+  ![Footer](https://github.com/KateEllen/shoe_shop/blob/main/media/footer.png)
+
 ### Features on the Home Page
-
-
+* Home Image 
+  * An image that shows to the user what the site is about.
+![Home page](https://github.com/KateEllen/shoe_shop/blob/main/media/homepage.png)
 
 ### Features on the Sign Up Page 
+* Sign Up Form 
+  * A very simply form, with instructions on how to register for the site. The text is clear and legible.
+  * Has form control that will tell the user if any fields haven't been filled out correctly whilst ensuring the form doesn't get sent without the required information.
+  * It includes the following fields:
+    *  Email field
+    *  Confirm email
+    *  Username
+    *  Password
+    *  Confirm password fields. 
+    *  Link to redirect users who have already registered in the site.
 
+* Sign Up Button 
+  * This button generates and sends a verification email link, to the email address provided. 
+  * This will allow the user to have accesible that information in their personal area. 
 
+    ![Sign Up](https://github.com/KateEllen/shoe_shop/blob/main/media/sign-up.png)
 
-### Features on the Sign In/Log in Page 
+### Features on the Sign In Page 
+* Sign In Form 
+  * Another easy Form, with instructions on how to log into the site. 
+  * Form control.
+  * Includes a username and password field, with a link at the top to direct users who haven't registered to the Sign Up page.
+  * Within the form there is also a remember me tick box which will save your login information for future visits.
 
+* Home Button 
+  * Button to return to the home page.
 
+* Sign In Button 
+  *  Authenticates the user and return to the home page.
 
+* Forgotten Password Link 
+  * Users can reset their password if they've forgotten it. An email containing a link that directs users to simple instructions on how to reset their password. 
+    ![Sign In](https://github.com/KateEllen/shoe_shop/blob/main/media/login.png)
 
 ### Features on All Products
+* Page Title 
+  * Helps the user to make sure they are on the correct page.
 
+* Sort By Dropdown 
+  * Sort All Products by price (high/low) or alphabetically.
+
+* Edit/Delete links 
+  * (Superusers Only) Access to the Edit/Delete links allowing them to delete products and directing them to the Edit page to edit the different products.
+      ![Sign In](https://github.com/KateEllen/shoe_shop/blob/main/media/product-example.png)
 
 
 ### Features on the Products Information Page
