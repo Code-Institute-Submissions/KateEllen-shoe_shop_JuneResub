@@ -37,10 +37,10 @@ def email_list_signup(request):
             email = request.POST.get('email')
             response = subscribe(email)
             print(response)
-            if response['subscription'] and response['subscription']['state'] == 'inactive':
+            if response['subscription'] and response['subscription']['state'] == 'inactive':  # noqa
                 messages.success(
                     request, "Subscribed, please confirm your email.")
-            elif response['subscription'] and response['subscription']['state'] == 'active':
+            elif response['subscription'] and response['subscription']['state'] == 'active':  # noqa
                 messages.info(
                     request, "Already subscribed, thanks for trying again!")
             else:

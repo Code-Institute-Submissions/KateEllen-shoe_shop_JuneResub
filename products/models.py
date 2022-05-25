@@ -17,8 +17,9 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)  # noqa
     sku = models.CharField(max_length=250, null=True, blank=True)
     name = models.CharField(max_length=250)
     description = models.TextField()
@@ -27,18 +28,16 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
 
-
     def __str__(self):
         return self.name
 
+
 class Review(models.Model):
-    product_id = models.ForeignKey('Product', null=True, related_name="products", blank=True, on_delete=models.SET_NULL)
+    product_id = models.ForeignKey('Product', null=True, related_name="products", blank=True, on_delete=models.SET_NULL)  # noqa
     review_title = models.CharField(max_length=50)
     review_content = models.TextField(max_length=500)
     review_date_posted = models.DateTimeField(default=timezone.now)
-    review_author = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL,related_name='review')
-
+    review_author = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL, related_name='review')  # noqa
 
     def __str__(self):
         return self.review
-

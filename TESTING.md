@@ -19,7 +19,7 @@ To validate the code the following **validation services** and **linters** were 
 * W3C CSS Validation Service
     Checks the validity of cascading style sheets (css) and (X)HTML documents with style sheets.
 
-* [PEP8 Online validation
+* PEP8 Online validation
     This linter checks the validity of Python code against the PEP8 requirements
 
 * [Chrome DevTools Lighthouse]

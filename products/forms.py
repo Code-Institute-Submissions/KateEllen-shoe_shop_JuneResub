@@ -8,10 +8,10 @@ class ReviewForm(forms.ModelForm):
         model = Review
         fields = (
            'product_id',
-'review_title',
-'review_content',
-'review_date_posted',
-'review_author'
+           'review_title',
+           'review_content',
+           'review_date_posted',
+           'review_author'
         )
 
 
