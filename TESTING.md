@@ -13,19 +13,19 @@
 
 To validate the code the following **validation services** and **linters** were used to check the code:
 
-* [W3C Markup Validator]()
+* W3C Markup Validator
     Checks the markup validity of Web documents in HTML, XHTML, SMIL, MathML, among others.
 
-* [W3C CSS Validation Service]()
+* W3C CSS Validation Service
     Checks the validity of cascading style sheets (css) and (X)HTML documents with style sheets.
 
-* [PEP8 Online validation]()
+* [PEP8 Online validation
     This linter checks the validity of Python code against the PEP8 requirements
 
-* [Chrome DevTools Lighthouse]()
+* [Chrome DevTools Lighthouse]
 
 
-    ![Lighthouse]()
+    ![Lighthouse](https://github.com/KateEllen/shoe_shop/blob/main/media/lighthouse.png)
 
 
 
@@ -98,15 +98,27 @@ To validate the code the following **validation services** and **linters** were 
  * Clicking the register button will trigger an email to be sent to the used email address requesting to confirm their email address, once verified the user will be returned to the main page.
 
 **All products - Dropdown** 
- *
-
-**All products Page - Via Shop Link** 
+* All the links in the dropdown list take the user to the different categories avaiable in the page.
+* The result of the users input is shown below with only the products listed in that category.
+* The page displays an item count so they can see how many products are available in that category, next to a link that directs them to the all products page. The item count was tested by entering and removing products from the database and updates accordingly.
+* The sort by dropdown is available for users to sort the products in the chosen category, it was tested by selecting all the availble sorting methods and observing the results, which were as expected.
+* The product image will take the user to that specific products details page.
 
 **Product Detail page** 
-
+* Show all the details of the selected product.
+* A category link takes users to that products category, where they will find other products in that category if there are any in the database. It was tested by clicking on every available method.
+* Users can use the amount minus and plus icons to select the amount of that product type to add to the bag. This has been tested with every product and the amount specified here will be added to the users shopping bag. 
+* Superusers will find the Edit and Delete buttons as well. They are not visible to nonsuperusers and they were tested by creating a regular user.
+* A continue shopping link directs users to the all products page whilst saving their current shopping bag.
+* The add to bag button adds the specified amount of the specified product to the users shopping bag. Users are notified of the success of this or if there's been an error.
 
 **Edit Product Button** 
-
+* Only super users have access to this button (found on Product Details page), and it was tested by creating a regular user.
+* Clicking the 'Edit' buttons take the user to a form with the fields filled out with the current information and the 'Edit' button in the forms changes the information in the database, before taking the user back to that products details page.
+* The form fields have validation and were tested using correct and incorrect information with the expected responses given.
+* The current image section shows a thumbnail of the current image with the option to remove it, select a new image from the files (select button) or add an image using the image url field.
+* Clicking the 'Cancel' button will take the user back to the details page without making any changes.
+* Users are notified of the successor if there is any errors so the request couldn't be processed.
 
 **Product Management** 
 
@@ -123,7 +135,9 @@ To validate the code the following **validation services** and **linters** were 
 **Checkout Page** 
 
 **Subscription:** 
-
+* The subscription form is available in all the pages. 
+* It asks the user to input a correct email.
+* User receives an email to confirm their subscription.
 
 ## Bugs found and solved
 
