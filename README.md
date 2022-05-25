@@ -111,10 +111,20 @@ The palette of colors for the site is simple, the main colors are black and whit
 ### Features in all apps
 * Navbar 
   * Contains the site name, My Account dropdown, Shopping bag, Search bar, all shoes, boots, heels, trainers, flats and special offers.
+  * My Profile and Logout links. Logged in superusers will also find the Manage Products.
+  * The Basket link will take users to their shopping basket page. 
+  * The search function allows users to input keywords that filter the content to meet the inputed criteria.
+
 * Funky Feet Logo 
   * A clickable link that brings you back to the homepage. 
 
-![Nav bar and Logo]()
+![Nav bar and Logo](https://github.com/KateEllen/shoe_shop/blob/main/media/nav-and-logo.png)
+
+### Footer 
+  * Subscribe, so the users can sign up for the NewsLetter.
+  * Facebook link. 
+  ![Nav bar and Logo](https://github.com/KateEllen/shoe_shop/blob/main/media/nav-and-logo.png)
+  
 ### Features on the Home Page
 
 
