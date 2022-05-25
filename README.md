@@ -104,23 +104,17 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 ![Color-palette]()
 
-
-
-# Database Schema 
-
-
-
-
-
-
 # Features
 
 ## Existing Features 
 
 ### Features in all apps
+* Navbar 
+  * Contains the site name, My Account dropdown, Shopping bag, Search bar, all shoes, boots, heels, trainers, flats and special offers.
+* Funky Feet Logo 
+  * A clickable link that brings you back to the homepage. 
 
-
-
+![Nav bar and Logo]()
 ### Features on the Home Page
 
 
@@ -142,7 +136,7 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 
 
-### Features on the Explore Page 
+### Features on the Review Page 
 
 
 
