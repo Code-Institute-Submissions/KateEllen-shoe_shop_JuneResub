@@ -156,7 +156,7 @@ To validate the code the following **validation services** and **linters** were 
   * Clicking the checkout button generates the payment through stripe, adding the order to the admin section of the site and the users profile page. This was tested using multiple users and making orders then viewing the reults.
   * The 'warning card is about to be debited' message updates with the bag user entries such as updating the amount of product and was tested by doing so.
 
-**Thank You page** 
+**Confirmation page** 
 * When users have checked out and paid, they are directed to a confirmation page with a copy of their order and a link which directs the to the Latest Deals page. 
 It will also display a toast message with all the details. 
 
