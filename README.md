@@ -177,21 +177,27 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 * Edit/Delete links 
   * (Superusers Only) Access to the Edit/Delete links allowing them to delete products and directing them to the Edit page to edit the different products.
-      ![Sign In](https://github.com/KateEllen/shoe_shop/blob/main/media/product-example.png)
+      ![All products](https://github.com/KateEllen/shoe_shop/blob/main/media/product-example.png)
 
 
 ### Features on the Products Information Page
+* Image 
+  * Image of the selected product. 
 
-
+* Product Information 
+  * Name
+  * Price
+  * Category
+  * Description
+  * Size selector
+  * Quantity selector
+![Product Information](https://github.com/KateEllen/shoe_shop/blob/main/media/product-info.png)
 
 ### Features on the Review Page 
 
 
 
 ### Features on the Profile Page  
-
-
-
 
 
 ### Features on the Shopping Bag

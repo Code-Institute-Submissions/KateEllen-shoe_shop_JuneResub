@@ -37,11 +37,6 @@
                         </a>
                     </p>
                     {% endif %}
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
                     {% if request.user.is_superuser %}
                     <small class="ml-3">
                         <a href="{% url 'edit_product' product.id %}">Edit</a> | 
@@ -139,7 +134,7 @@
     {% else %}
       <!-- Re-direct user to sign up option if not logged in  -->
     <div class="container text-center register-warning">
-        <h3>You're not allowed here.. <a class="btn" href="{% url 'account_signup' %}">Sign up</a></h3>
+        <h3>Sign up to leave a review! <a class="btn" href="{% url 'account_signup' %}">Sign up</a></h3>
     </div>
 
     {% endif %}
