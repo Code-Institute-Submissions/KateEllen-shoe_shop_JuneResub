@@ -1,6 +1,6 @@
 <h1> Funky Feet </h1>
 
-**View a live version of the site [here]().**
+**View a live version of the site [here](https://funky-feet.herokuapp.com/).**
 
 This project has been created for educational purposes.
 
@@ -247,19 +247,36 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 ![Product Information](https://github.com/KateEllen/shoe_shop/blob/main/media/product-info.png)
 
-
 ### Features on the Checkout Page 
+* Payment form 
+  * Follow same structures and form validation. 
+  * If the user have ordered before the information will be populated as well.
 
+* Save Information Tickbox 
+  * If the user ticks their information will be saved for thenext time.
+  * If a field needs to be updated the user can enter the information in the checkout form and it will override the data on the profile page if the user select 'Save this delivery information to my profile'.
 
+* Payment Form Field 
+  * This box will require users their card information (card number, month/year, cvc and zip code). To test you must use stripe default test card.
 
+* Adjust Bag Button 
+  * Redirect the users back to the Shopping Bag page.
 
+* Complete Order Button 
+  * The order for the user is processed. 
+  * Generates a confirmation email that is sent to the email address provided in the checkout form.
+
+* Card Charge Warning 
+* Reminder for the users to tell them that their card will be charged with the stated amount.
+
+![Checkout](https://github.com/KateEllen/shoe_shop/blob/main/media/checkout.png)
 
 ### Features on the Subscription feature
+** Please note that email from site (Funky Feet) may end up in spam folder **
 
-
-
-
-
+* The user can subscribe to the page.
+* The user have an input box and a button to subscribe.
+* The user will be receiving an email in their inbox.
 
 ## Future features 
 * Returns
