@@ -199,8 +199,53 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 ### Features on the Profile Page  
 
+* Delivery Information Form 
+  * This form shows the user's default delivery information. 
+  * There are required fields that need to be filled/updated before being able to save it.
+  * The information from this form will automatically be taken from the order form when the user is buying something if they have filled out the checkout form and clicking the tick box 'Save this delivery information to my profile'.
+
+* Form Fields 
+  * The input fields are: 
+    * Phone Number
+    * Street Address 1
+    * Street Address 2
+    * Town or City
+    * County
+    * Postcode
+    * Country dropdown to make easier for the user to find their country.
+
+  * The form has instructions in how to be completed and also has form validation 
+
+* Update Information Button 
+  * If the users want to update their delivery information, fill out the fields in the form above with the required information and click this button to save the updated information to their profile.
+
+* Order History 
+  * This section provides users with their personal order history, including date, time, items ordered, order number, etc.
+  * The most recent order will be displayed at the top.
+
+  ![Profile](https://github.com/KateEllen/shoe_shop/blob/main/media/my-profile.png)
+
 
 ### Features on the Shopping Bag
+* List of Added Items
+  *  The list contains:
+     *  Product Info section
+     *  Image
+     *  Product name 
+     *  SKU 
+     *  Total price section 
+     *  Quantity function with -/+ buttons to adjust the amount of items that the user wants to buy, in case they want to add more items.
+
+* Basket Total 
+  *  This is the total items the user will have in their shopping bag. 
+
+* Delivery  
+  * Delivery charge the user will be charged if they don't reach the $80 to get a free delivery.
+
+* Grand Total  
+  * The sum of the total of all the items in the bag and delivery charge. This is the total amount the users will be charged in their cards. 
+
+![Product Information](https://github.com/KateEllen/shoe_shop/blob/main/media/product-info.png)
 
 
 ### Features on the Checkout Page 
