@@ -86,12 +86,12 @@ The different elements on the site (header/footer/nav links) remain the same acr
 
 The wireframes of the site can be found in the following links: 
 
-* [Homepage]()
-* [All products]()
-* [Product detail]()
-* [Profile]()
-* [Bag]()
-* [Checkout]()
+* ![Homepage](https://github.com/KateEllen/shoe_shop/blob/main/media/home-wireframe.png)
+* ![All products](https://github.com/KateEllen/shoe_shop/blob/main/media/all-products-wireframe.png)
+* ![Product detail](https://github.com/KateEllen/shoe_shop/blob/main/media/product-detail-wireframe.png)
+* ![Profile](https://github.com/KateEllen/shoe_shop/blob/main/media/profile-wireframe.png)
+* ![Bag](https://github.com/KateEllen/shoe_shop/blob/main/media/bag-wireframe.png)
+* ![Checkout](https://github.com/KateEllen/shoe_shop/blob/main/media/checkout-wireframe.png)
 
 The final result is slightly different as during the development stage the way things were displayed was not as user friendly as expected. 
 
