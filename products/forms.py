@@ -7,11 +7,8 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = (
-           'product_id',
            'review_title',
            'review_content',
-           'review_date_posted',
-           'review_author'
         )
 
 

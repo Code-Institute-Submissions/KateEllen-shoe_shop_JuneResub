@@ -145,7 +145,7 @@ def delete_product(request, product_id):
 @login_required
 def add_review(request, product_id):
     """ Returns .html """
-    # product = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
     # reviews = product.reviews
     new_review = None
     if request.method == 'POST':
@@ -157,8 +157,9 @@ def add_review(request, product_id):
             new_review.comment_author = request.user
             new_review.save()
             """ Assign Comment to Post """
-            # new_review.product_id = product
+            new_review.product_id = product.id
             new_review.save()
+            print(new_review)
             review_form = ReviewForm()
             messages.success(request, 'Successfully posted your comment.')
             return redirect(reverse('products'))
