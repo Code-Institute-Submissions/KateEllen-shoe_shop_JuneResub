@@ -6,8 +6,8 @@ from django.db.models.functions import Lower
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 
-from .forms import ReviewForm, ProductForm
-from .models import Product, Category, Review
+from .forms import ProductForm
+from .models import Product, Category
 
 # Create your views here.
 
@@ -140,39 +140,3 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted successfully!')
     return redirect(reverse('products'))
-
-
-@login_required
-def add_review(request, product_id):
-    """ Returns .html """
-    product = get_object_or_404(Product, pk=product_id)
-    # reviews = product.reviews
-    new_review = None
-    if request.method == 'POST':
-        review_form = ReviewForm(data=request.POST)
-        if review_form.is_valid():
-            """ Create Comment """
-            new_review = review_form.save(commit=False)
-            """ Assign Author To Comment """
-            new_review.comment_author = request.user
-            new_review.save()
-            """ Assign Comment to Post """
-            new_review.product_id = product.id
-            new_review.save()
-            print(new_review)
-            review_form = ReviewForm()
-            messages.success(request, 'Successfully posted your comment.')
-            return redirect(reverse('products'))
-    else:
-        review_form = ReviewForm()
-
-    template = 'products/add_review.html'
-
-    context = {
-        # 'product': product,
-        # 'reviews': reviews,
-        'review_form': review_form,
-        'on_profile_page': True
-    }
-
-    return render(request, template, context)

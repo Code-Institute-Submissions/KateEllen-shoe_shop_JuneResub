@@ -51,8 +51,7 @@ This project is for educational purposes only.
 * As a **Registered User**, I want to receive a purchase confirmation email.
 * As a **Registered User**, I want to be able to easily update my contact and delivery information.
 * As a **Registered User**, I want to be able to view my previous orders.
-* As a **Registered User**, I want to be able to leave a review.
-* As a **Registered User**, I want to be able to midify my review.
+
 
 ### Site Owner/Superuser goals
 
@@ -192,10 +191,6 @@ The palette of colors for the site is simple, the main colors are black and whit
   * Size selector
   * Quantity selector
 ![Product Information](https://github.com/KateEllen/shoe_shop/blob/main/media/product-info.png)
-
-### Features on the Review Page 
-
-
 
 ### Features on the Profile Page  
 

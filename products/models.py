@@ -30,14 +30,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Review(models.Model):
-    product_id = models.ForeignKey('Product', null=True, related_name="products", blank=True, on_delete=models.SET_NULL)  # noqa
-    review_title = models.CharField(max_length=50)
-    review_content = models.TextField(max_length=500)
-    review_date_posted = models.DateTimeField(default=timezone.now)
-    review_author = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL, related_name='review')  # noqa
-
-    def __str__(self):
-        return self.review

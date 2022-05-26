@@ -1,15 +1,6 @@
 from django import forms
 
-from .models import Review, Product, Category
-
-
-class ReviewForm(forms.ModelForm):
-    class Meta:
-        model = Review
-        fields = (
-           'review_title',
-           'review_content',
-        )
+from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
