@@ -343,6 +343,11 @@ input[name='q']::placeholder {
     margin-bottom: 40px;
 }
 
+.max {
+    display: flex;
+    max-width: 100%;
+}
+
 .home-title {
     position: absolute;
     font-size: 15rem;
@@ -402,6 +407,7 @@ input[name='q']::placeholder {
         margin-top: 20px;
         padding-top: 0;
     }
+
 }
 
 @media (max-width: 400px) {
@@ -413,10 +419,6 @@ input[name='q']::placeholder {
         position: relative;
         font-size: 5rem;
     }
-    .max {
-        height: 300px;
-        width: auto;
-        margin-right: 10px;
-    }
+
 }
 
