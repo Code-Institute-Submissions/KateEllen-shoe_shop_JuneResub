@@ -176,6 +176,10 @@ input[name='q']::placeholder {
     overflow-x: hidden;
     overflow-y: auto;
 }
+/********************************************* Image */
+.max {
+    max-height: 70vh
+}
 
 /********************************************* Footer */
 .page-footer{
@@ -183,6 +187,7 @@ input[name='q']::placeholder {
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
+    
     
   }
   
@@ -313,10 +318,6 @@ input[name='q']::placeholder {
         left: 0;
         z-index: 1030;
     }
-
-    .header-container {
-        padding-top: 164px;
-    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -377,7 +378,7 @@ input[name='q']::placeholder {
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1510px) {
     .home-main {
         display: block;
     }
@@ -400,6 +401,22 @@ input[name='q']::placeholder {
     .home-right {
         margin-top: 20px;
         padding-top: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-main {
+        display: block;
+    }
+
+    .home-title {
+        position: relative;
+        font-size: 5rem;
+    }
+    .max {
+        height: 300px;
+        width: auto;
+        margin-right: 10px;
     }
 }
 
