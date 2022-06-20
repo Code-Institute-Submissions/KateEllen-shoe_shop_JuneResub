@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h2 class="logo-font">Blog</h2>
+            <hr>
+        </div>
+    </div>
+    <!-- All posts link and posts count  -->
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-0">
+                <div class="col-12 col-md-6 order-md-first">
+                    <p class="text-muted mt-3 text-center">
+                        <span class="small">
+                            <a href="{% url 'view_blog' %}" class="link-button styled-link">
+                                All Blog Posts</a>
+                            | </span>
+                        {{ posts|length }} Posts
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% for post in posts %}
+    <div class="card mb-4 mx-auto border-radius-default " style="max-width: 60%;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                {% if post.image %}
+                <a href="{% url 'blog_detail' post.id %}">
+                    <img src="{{ post.image.url }}" class="img-fluid rounded-start" alt="{{ post.post_title }}">
+                </a>
+                {% else %}
+                <a href="{% url 'blog_detail' post.id %}">
+                    <img class="img-fluid rounded-start" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.post_title }}">
+                </a>
+                {% endif %}
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <a class="styled-link" href="{% url 'blog_detail' post.id %}">
+                        <h5 class="card-title">{{ post.post_title }}</h5>
+                    </a>
+                    <p>
+                        <cite>
+                            {{ post.post_author }}
+                        </cite>
+                    </p>
+                    <p><small class="text-muted">Last updated
+                            {{ post.post_date_posted|date:'F d, Y' }}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock %}
