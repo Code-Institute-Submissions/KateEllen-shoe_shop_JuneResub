@@ -16,10 +16,7 @@ class Post(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        if not self.title:
-            return ""
-        else:
-            return self.title  # noqa
+        return self.post_title
 
 
 class Comment(models.Model):
@@ -34,8 +31,3 @@ class Comment(models.Model):
         return '%s -%s' % (self.post, self.name)
 
 
-class Characters(models.Model):
-    name = models.CharField(max_length=200)
-    image = CloudinaryField('image', default='placeholder')
-    bio = models.TextField()
-    tag_lines = models.TextField()

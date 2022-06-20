@@ -1,13 +1,26 @@
 from django import forms
-from .models import Comment
+from .widgets import CustomClearableFileInput
+from .models import Post, Comment
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = (
+            'image_url',
+            'image',
+            'post_title',
+            'post_content',
+        )
+
+    image = forms.ImageField(label='Image', required=False,
+                             widget=CustomClearableFileInput)
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('name', 'body')
-
-        widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'body': forms.Textarea(attrs={'class': 'form-control'}),
-        }
+        fields = (
+            'comment_title',
+            'comment_content',
+        )
