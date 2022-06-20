@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+<!-- Push Content Down Page -->
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<!-- Post container -->
+<div class="container-sm">
+    <div class="card border-0 mb-3">
+        <!-- post Image -->
+        {% if post.image %}
+        <a href="{{ post.image.url }}" target="_blank">
+            <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.post_title }}">
+        </a>
+        {% else %}
+        <a href="">
+            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.post_title }}">
+        </a>
+        {% endif %}
+        <!-- Post body -->
+        <div class="card-body">
+            <h5 class="card-title mt-5">{{ post.post_title }}</h5>
+            <p class="card-text">{{ post.post_content }}</p>
+            <p class="card-text"><small class="text-muted">{{ post.post_date_posted|date:'F d, Y' }}</small></p>
+            <!-- Edit and delete posts, only available for creator or superuser -->
+            {% if post.post_author == user or request.user.is_superuser %}
+            <div class="block mt-2">
+                <small>
+                    <a href="{% url 'edit_post' post.id %}">Edit</a>
+                    <a class="text-danger ml-3" href="{% url 'delete_post' post.id %}">Delete</a>
+                </small>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- Add a comment section -->
+<hr class="w-50 mb-5">
+<div class="container comment-form">
+    <div class="row">
+        <div class="col text-center">
+            <h4>Leave a Comment</h4>
+        </div>
+    </div>
+    <!-- Only displays if user is authenticated -->
+    {% if user.is_authenticated %}
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3 mb-5">
+            <form class="col-sm-12 mt-3" method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group border-radius-default ">
+                    {{ comment_form|crispy }}
+                </fieldset>
+                <div class="mb-3 text-center">
+                    <a class="btn btn-outline-black btn-lg border-radius-default "
+                        href="{% url 'blog_detail' post.id %}">Cancel</a>
+                    <button class="btn btn-lg btn-black border-radius-default " type="submit">Post Comment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% else %}
+    <!-- Display this if they are not logged in -->
+    <div class="text-center mt-4">
+        <label class="form-check-label" for="id-save-info">
+            You need to
+            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+            <a class="text-info" href="{% url 'account_login' %}">Login</a> to comment on this post.
+        </label>
+    </div>
+    {% endif %}
+</div>
+<!-- Comments section -->
+<hr class="w-50 mb-5">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="text-center">
+                <h4>Comments</h4>
+            </div>
+            <div class="product-container col-10 offset-1">
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            <span class="small"><a href="{% url 'blog_detail' post.id %}" class="link-button">
+                                    All Comments</a> | </span>
+                            {{ comments|length }} Comment(s)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- If no comments will display this -->
+    <div class="row mt-3">
+        {% if not comments.all %}
+        <div class="col-12 mb-5">
+            <p class="text-center">No Comments in this post.</p>
+        </div>
+        {% else %}
+        {% for comment in comments %}
+        <div class="container mb-5">
+            <div class="card border-radius-default ">
+                <div class="card-header">
+                    {{ comment.comment_title }}
+                </div>
+                <div class="card-body">
+                    <blockquote class=" mb-0">
+                        <p>{{comment.comment_content}}</p>
+                        <footer class="blockquote-footer"><cite title="Source Title">
+                                {{ comment.comment_author }}</cite>
+                            <p>
+                                <small class="text-muted">{{ comment.comment_date_posted|date:'F d, Y' }}</small>
+                            </p>
+                            {% if comment.comment_author == user or request.user.is_superuser %}
+                            <div class="block">
+                                <small class="mt-2">
+                                    <a href="{% url 'edit_comment' comment.id %}">Edit</a>
+                                    <a class="text-danger ml-3" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                                </small>
+                            </div>
+                            {% endif %}
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<!-- Back to Blog page button -->
+<div class="sm-12 text-center mb-5">
+    <a href="{% url 'view_blog' %}" class="btn btn-outline-black btn-lg border-radius-default ">
+        <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="text-uppercase">Back to Blog</span>
+    </a>
+</div>
+<!-- Back To Top Button -->
+<div class="btt-button shadow-sm border-radius-default  border border-black text-left">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+{% endblock %}

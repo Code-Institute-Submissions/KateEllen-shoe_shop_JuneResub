@@ -1,126 +1,175 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
+    get_object_or_404
+)
 from django.contrib import messages
-from django.views import generic, View
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView  # noqa
-from .models import Post, Comment, Characters
-from .forms import CommentForm, CharacterEditForm, CharacterAddForm
-from django.urls import reverse_lazy, reverse
-from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
+
+from .models import Post, Comment
+from .forms import CommentForm, PostForm
 
 
-class HomeView(ListView):
-    model = Post
-    queryset = Post.objects.filter(status=1).order_by("-created_on")
-    template_name = "index.html"
-    paginate_by = 6
+def view_blog(request):
+    """ Returns blog.html """
+    context = {
+        'posts': Post.objects.all()
+    }
+    return render(request, 'blog/blog.html', context)
 
 
-class BlogDetailView(DetailView):
-    model = Post
-    template_name = 'blog_details.html'
+def blog_detail(request, post_id):
+    """ Returns blog_detail.html """
+    post = get_object_or_404(Post, pk=post_id)
+    comments = post.comments.filter()
+    new_comment = None
+    template = 'blog/blog_detail.html'
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            """ Create Comment """
+            new_comment = comment_form.save(commit=False)
+            """ Assign Author To Comment """
+            new_comment.comment_author = request.user
+            new_comment.save()
+            """ Assign Comment to Post """
+            new_comment.post_id = post
+            new_comment.save()
+            comment_form = CommentForm()
+            messages.success(request, 'Successfully posted your comment.')
+            return redirect(reverse('blog_detail', args=[post.id]))
+    else:
+        comment_form = CommentForm()
+
+    context = {
+        'post': post,
+        'comments': comments,
+        'comment_form': comment_form,
+        'on_profile_page': True
+    }
+
+    return render(request, template, context)
 
 
-class PostDetail(View):
+@login_required
+def edit_comment(request, comment_id):
+    """ Edit Comment """
+    """ Prefill Form """
+    comment = get_object_or_404(Comment, pk=comment_id)
+    if request.user == comment.comment_author or request.user.is_superuser:
+        if request.method == 'POST':
+            comment_form = CommentForm(request.POST, instance=comment)
+            if comment_form.is_valid():
+                comment_form.save()
+                messages.success(request, 'Comment successfully updated')
+                return redirect(reverse('view_blog'))
+            else:
+                messages.error(request,
+                               'Error - Please check form is valid and \
+                                    try again.')
+        else:
+            comment_form = CommentForm(instance=comment)
+            messages.info(request, f'You are editing {comment.comment_title}')
+    else:
+        messages.error(request, 'Sorry, only the comment author can do that')
+        return redirect(reverse('home'))
 
-    def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
-        liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
-            liked = True
+    template = 'blog/edit_comment.html'
+    context = {
+        'comment_form': comment_form,
+        'comment': comment,
+        'on_profile_page': True
+    }
 
-        return render(
-            request,
-            "blog_details.html",
-            {
-                "post": post,
-                "comments": comments,
-                "commented": False,
-                "liked": liked,
-                "comment_form": CommentForm()
-            },
-        )
-
-
-class AddCommentView(CreateView):
-    model = Comment
-    form_class = CommentForm
-    template_name = 'add_comment.html'
-    success_url = reverse_lazy('home')
-
-    def form_valid(self, form):
-        form.instance.post_id = self.kwargs['pk']
-        return super().form_valid(form)
-        messages.success = "Comment added!"
+    return render(request, template, context)
 
 
-class CharacterList(ListView):
-    model = Characters
-    queryset = Characters.objects.order_by("name")
-    template_name = "character_list.html"
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    if request.user == comment.comment_author or request.user.is_superuser:
+        """ Delete Comment """
+        comment.delete()
+        messages.success(request, 'Comment deleted')
+        return redirect(reverse('view_blog'))
+    else:
+        messages.error(request, 'Sorry, only the comment author can do that')
+        return redirect(reverse('home'))
 
 
-class CharacterDetail(DetailView):
-    model = Characters
-    template_name = "character_detail.html"
+@login_required
+def add_post(request):
+    """ Superuser Access Only """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, owners only function')
+        return redirect(reverse('home'))
+    """ Add Blog Post """
+    if request.method == 'POST':
+        post_form = PostForm(request.POST, request.FILES)
+        if post_form.is_valid():
+            new_post = post_form.save(commit=False)
+            """ Assign Author To Comment """
+            new_post.post_author = request.user
+            new_post.save()
+            post_form = PostForm()
+            messages.success(request, 'Blog post successfully added')
+            return redirect(reverse('blog_detail', args=[new_post.id]))
+        else:
+            messages.error(request,
+                           'Error - Please check form is valid and try again.')
+    else:
+        post_form = PostForm()
+
+    template = 'blog/add_post.html'
+    context = {
+        'post_form': post_form,
+        'on_profile_page': True
+    }
+
+    return render(request, template, context)
 
 
-@method_decorator(login_required(
-    login_url='/accounts/login/'), name='dispatch')
-class EditCharacterView(UpdateView):
-    model = Characters
-    form_class = CharacterEditForm
-    template_name = 'edit_character.html'
+@login_required
+def edit_post(request, post_id):
+    """ Superuser Access Only """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, owners only function')
+        return redirect(reverse('home'))
+    """ Edit Post """
+    """ Prefill Form """
+    post = get_object_or_404(Post, pk=post_id)
+    if request.method == 'POST':
+        post_form = PostForm(request.POST, request.FILES, instance=post)
+        if post_form.is_valid():
+            post_form.save()
+            messages.success(request, 'Post successfully updated')
+            return redirect(reverse('blog_detail', args=[post.id]))
+        else:
+            messages.error(request,
+                           'Error - Please check form is valid and try again.')
+    else:
+        post_form = PostForm(instance=post)
+        messages.info(request, f'You are editing {post.post_title}')
 
-    def form_valid(self, form):
-        """
-        Upon success prompt the user with a success message.
-        """
-        messages.success(self.request, "Edit made!")
-        super().form_valid(form)
-        return HttpResponseRedirect(self.get_success_url())
+    template = 'blog/edit_post.html'
+    context = {
+        'post_form': post_form,
+        'post': post,
+        'on_profile_page': True
+    }
 
-    def get_success_url(self, **kwargs):
-        return reverse_lazy("character_detail", args=[str(self.object.pk)])
-
-
-@method_decorator(login_required(
-    login_url='/accounts/login/'), name='dispatch')
-class DeleteCharacterView(DeleteView):
-    model = Characters
-    template_name = 'delete_character.html'
-    messages_success = 'Character deleted!'
-
-    def get_success_url(self, **kwargs):
-        return reverse_lazy("character_list")
-
-    def delete(self, request, *args, **kwargs):
-        """
-        Success message to be displayed after deletion of post.
-        Help from multiple stackoverflow posts.
-        """
-        messages.success(self.request, self.messages_success)
-        return super(DeleteCharacterView, self).delete(request, *args, **kwargs)  # noqa
+    return render(request, template, context)
 
 
-@method_decorator(login_required(
-    login_url='/accounts/login/'), name='dispatch')
-class AddCharactersView(CreateView):
-    model = Characters
-    form_class = CharacterAddForm
-    template_name = 'add_characters.html'
-
-    def form_valid(self, form):
-        """
-        Upon success prompt the user with a success message.
-        """
-        messages.success(self.request, "Character made!")
-        super().form_valid(form)
-        return HttpResponseRedirect(self.get_success_url())
-
-    def get_success_url(self, **kwargs):
-        return reverse_lazy("character_detail", args=[str(self.object.pk)])
-
+@login_required
+def delete_post(request, post_id):
+    """ Superuser Access Only """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, owners only function')
+        return redirect(reverse('home'))
+    """ Delete Post """
+    post = get_object_or_404(Post, pk=post_id)
+    post.delete()
+    messages.success(request, 'Post deleted')
+    return redirect(reverse('view_blog'))
