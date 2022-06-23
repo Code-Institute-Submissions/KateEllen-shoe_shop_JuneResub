@@ -10,3 +10,5 @@ class PostAdmin(admin.ModelAdmin):
     )
 
     ordering = ('-post_date_posted',)
+
+admin.site.register(Post, PostAdmin)
