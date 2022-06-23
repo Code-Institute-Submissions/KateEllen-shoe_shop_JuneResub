@@ -40,18 +40,7 @@
     {% for post in posts %}
     <div class="card mb-4 mx-auto border-radius-default " style="max-width: 60%;">
         <div class="row g-0">
-            <div class="col-md-4">
-                {% if post.image %}
-                <a href="{% url 'blog_detail' post.id %}">
-                    <img src="{{ post.image.url }}" class="img-fluid rounded-start" alt="{{ post.post_title }}">
-                </a>
-                {% else %}
-                <a href="{% url 'blog_detail' post.id %}">
-                    <img class="img-fluid rounded-start" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.post_title }}">
-                </a>
-                {% endif %}
-            </div>
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card-body">
                     <a class="styled-link" href="{% url 'blog_detail' post.id %}">
                         <h5 class="card-title">{{ post.post_title }}</h5>
