@@ -8,7 +8,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import Post, Comment
-from .forms import PostForm
+from .forms import PostForm, CommentForm
 
 
 def view_blog(request):
