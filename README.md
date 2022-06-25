@@ -299,7 +299,11 @@ It's required to have an [AWS](https://aws.amazon.com/s3/) account and a [S3 buc
 
 6. When your app is deployed successfully. Click _Open App_ in to top right hand corner of Heroku to open app in a new tab in the browser.
 
+## Entity Relationship Diagram
 
+
+## Database Choice
+I used postgres as the database because the data is relational and heroku serves this up realitvely easily with no cost.
 
 # Credits
 
