@@ -305,6 +305,25 @@ It's required to have an [AWS](https://aws.amazon.com/s3/) account and a [S3 buc
 ## Database Choice
 I used postgres as the database because the data is relational and heroku serves this up realitvely easily with no cost.
 
+# E-commerce Business Model
+
+
+## Facebook Business Page
+
+## Newsletter Signup
+
+
+## SEO Strategy
+
+### Keywords
+### Description
+### Title
+### Relevant Content
+### Sitemap
+
+### Robots.txt
+
+
 # Credits
 
 ## Content 
