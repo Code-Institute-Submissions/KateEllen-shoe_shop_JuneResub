@@ -284,6 +284,7 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 ### Features on the Blog
 
+* CRUD functionality
 * View Blog Posts
 * Post Title gives information for the user about what the blog post is about.
 * Post Link
@@ -315,7 +316,7 @@ Super user's can delete their blog posts.
 ### Features on the Comments 
 
 * CRUD functionality
-* Creat comments
+* Create comments
 * Read comments under specific blog post
 * Edit comments you have left
 * Delete comments you have left
