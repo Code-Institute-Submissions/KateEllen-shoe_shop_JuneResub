@@ -342,6 +342,8 @@ It's required to have an [AWS](https://aws.amazon.com/s3/) account and a [S3 buc
 ## Database Choice
 I used postgres as the database because the data is relational and heroku serves this up realitvely easily with no cost.The models used to construct the site are outlined below:
 
+* Post
+
 | DB Key 	         | Data Type 	   |          Purpose          	        | Form Validation                        	|
 |--------	         |:---------:	   |:-------------------------:	        |----------------------------------------	|
 | pk   	           | ObjectId  	   | unique identifier, auto generated  | None                                   	|
@@ -349,6 +351,81 @@ I used postgres as the database because the data is relational and heroku serves
 | post_content     | TextField     | Body of blog 	                    | Required                               	|
 | post_date_posted | DateTimeField | Date of blog being created 	      | Required                               	|
 | post_content     | ForeignKey    | User who created blog 	            | Required                               	|
+
+* Comment
+
+| DB Key              | Data Type     | Purpose                       | Form Validation |
+|---------------------|---------------|-------------------------------|-----------------|
+| post_id             | ForeignKey    | Unique identifier             | None            |
+| comment_title       | CharField     | Display comment title         | Required        |
+| comment_content     | TextField     | Body of comment               | Required        |
+| comment_date_posted | DateTimeField | Date of comment being created | Required        |
+| comment_author      | ForeignKey    | User who created comment      | Required        |
+
+* Order
+
+| DB Key          | Data Type     | Purpose                       | Form Validation           |
+|-----------------|---------------|-------------------------------|---------------------------|
+| order_number    | CharField     | Unique identifier             | None                      |
+| user_profile    | ForeignKey    | Display comment title         | Required                  |
+| full_name       | CharField     | Users name                    | Required                  |
+| email           | EmailField    | Users email                   | Required                  |
+| phone_number    | CharField     | Users phone number            | Required                  |
+| country         | CountryField  | Users country                 | Required                  |
+| postcode        | CharField     | Users postcode                | Required                  |
+| town_or_city    | CharField     | Users town or city            | Required                  |
+| street_address1 | CharField     | Users street address 1        | Required                  |
+| street_address2 | CharField     | Users street address 2        | Not required              |
+| county          | CharField     | Users county                  | Required                  |
+| date            | DateTimeField | Date of order                 | Required, auto populated  |
+| delivery_cost   | DecimalField  | Delivery cost                 | Required, auto populated  |
+| order_total     | DecimalField  | Cost of items in bag          | Required, auto populated  |
+| grand_total     | DecimalField  | Total cost including delivery | Required, auto populated  |
+| original_bag    | TextField     | Bag total                     | Required, auto populated  |
+| stripe_pid      | CharField     | Stripe payments               | Required                  |
+
+* Order Line Item
+
+| DB Key         | Data Type    | Purpose           | Form Validation          |
+|----------------|--------------|-------------------|--------------------------|
+| order          | ForeignKey   | Show order        | Required                 |
+| product        | ForeignKey   | Products in order | Required                 |
+| product_size   | CharField    | Size of shoe      | Required                 |
+| quantity       | IntegerField | Amount selected   | Required                 |
+| lineitem_total | DecimalField | total amount      | Required, auto populated |
+
+* Product
+
+| DB Key      | Data Type    | Purpose                     | Form Validation          |
+|-------------|--------------|-----------------------------|--------------------------|
+| category    | ForeignKey   | Category of product         | Required                 |
+| sku         | CharField    | Stock keeping unit          | Required, auto populated |
+| name        | CharField    | Name of product             | Required                 |
+| description | TextField    | Description of product      | Required                 |
+| price       | DecimalField | Price of product            | Required                 |
+| image_url   | URLField     | URL image of product        | Not Required             |
+| image       | ImageField   | Image of product            | Not Required             |
+| has_sizes   | BooleanField | Available sizes for product | Not Required             |
+
+* User profile
+
+| DB Key                  | Data Type     | Purpose                | Form Validation                                 |
+|-------------------------|---------------|------------------------|-------------------------------------------------|
+| user                    | OneToOneField | Logged in user         | Required                                        |
+| default_phone_number    | CharField     | Saved phone number     | Not Required, auto populated if saved by user   |
+| default_street_address1 | CharField     | Saved street address 1 | Not Required, auto populated if saved by user   |
+| default_street_address2 | CharField     | Saved street address 2 | Not Required, auto populated if saved by user** |
+| default_town_or_city    | CharField     | Saved town or city     | Not Required, auto populated if saved by user   |
+| default_country         | CountryField  | Saved country          | Not Required, auto populated if saved by user   |
+| default_postcode        | CharField     | Saved postcode         | Not Required, auto populated if saved by user   |
+| default_county          | CharField     | Saved county           | Not Required, auto populated if saved by user   |
+
+* Subscription
+
+| DB Key    | Data Type  | Purpose        | Form Validation          |
+|-----------|------------|----------------|--------------------------|
+| email     | EmailField | Logged in user | Required                 |
+| timestamp | CharField  | DateTimeField  | Required, auto populated |
 
 # E-commerce Business Model
 
