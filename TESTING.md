@@ -2,11 +2,6 @@
 
 [View the live project here.](https://funky-feet.herokuapp.com/)
 
-
-## Table of Contents
-
-
-
 ## Code Validation
 
 ## Validation Services
@@ -18,14 +13,17 @@ To validate the code the following **validation services** and **linters** were 
 
 * W3C CSS Validation Service
     Checks the validity of cascading style sheets (css) and (X)HTML documents with style sheets.
+![CSS](https://github.com/KateEllen/shoe_shop/blob/main/media/css.png)
 
 * PEP8 Online validation
     This linter checks the validity of Python code against the PEP8 requirements
+![PEP8](https://github.com/KateEllen/shoe_shop/blob/main/media/pep8.png)
+
+* JSON jsonlint validator
+![JSON](https://github.com/KateEllen/shoe_shop/blob/main/media/json.png)
 
 * [Chrome DevTools Lighthouse]
-
-
-    ![Lighthouse](https://github.com/KateEllen/shoe_shop/blob/main/media/lighthouse.png)
+![Lighthouse](https://github.com/KateEllen/shoe_shop/blob/main/media/lighthouse.png)
 
 
 
@@ -164,12 +162,5 @@ It will also display a toast message with all the details.
 * The subscription form is available in all the pages. 
 * It asks the user to input a correct email.
 * User receives an email to confirm their subscription.
-
-## Bugs found and solved
-
-The issues found have been tracked on Github directly and can be found [here](https://github.com/CarolinaCobo/styx/issues?q=is%3Aissue+is%3Aclosed).
-
-Inside each one of them there's information or screenshots showing what the error was and solved linking them to the commit where they were fixed. 
-
 
 ** To go back to [README.md](./README.md) **

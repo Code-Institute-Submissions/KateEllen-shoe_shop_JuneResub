@@ -14,15 +14,6 @@ ___
 The goal of this project is to create E*Commerce store for a ladies shoe shop. 
 This project is for educational purposes only.
 
-# E-commerce Business Model
-This site is designed for women who love shoes. They can find comfortable and unique styles for any ocassion. The user is also able to subscribe the the newsletter to receive news about the store.
-
-## Facebook Business Page
-Below are screenshots of the Funky Feet Facebook page. This page gives users the oppertunity to see extra updates outside of the website. The facebook page can be viewed here [Facebook](https://www.facebook.com/Funky-Feet-100119349392932)
-
-![Facebook1](https://github.com/KateEllen/shoe_shop/blob/main/media/facebook1.png)
-![Facebook2](https://github.com/KateEllen/shoe_shop/blob/main/media/facebook2.png)
-
 ### Importance and Feasibility chart
 
 | Opportunity/Problem                                                                            | Importance | Viability/Feasibility |
@@ -38,6 +29,8 @@ Below are screenshots of the Funky Feet Facebook page. This page gives users the
 | Users can sign up to the newsletter                                                            | 3          | 4                     |
 
 ## User Stories
+
+I used the Project page of Github to help keep track of my work. You can find it [here](https://github.com/KateEllen/shoe_shop/projects/1)
 
 ### User Goals
 
@@ -131,6 +124,8 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 ### Footer 
   * Subscribe, so the users can sign up for the NewsLetter.
+  * Users can sign up for newsletters to get previews of celebrity blogs and sales
+
   * Facebook link. 
   ![Footer](https://github.com/KateEllen/shoe_shop/blob/main/media/footer.png)
 
@@ -285,6 +280,7 @@ The palette of colors for the site is simple, the main colors are black and whit
 * The user will be receiving an email in their inbox.
 
 ### Features on the Blog
+* The site supports a blog which will host product writes ups by famous people or  instagram influencers to help better sell products and increase product awareness.
 
 * CRUD functionality
 * View Blog Posts
@@ -296,7 +292,10 @@ The palette of colors for the site is simple, the main colors are black and whit
   * Date and time stamp and the profile name of the super user who created the post entry.
 * Post Content/Body
   * The content of the blog that has been included by the super user.
+
 * Comments
+* Comments were included in blogs to help enrich a community environment among frequent visitors and encourage interaction with customers.
+
   * The comments section shows users responses to the blog.
   * Only registered users can post comments.
   * To post comments to the blogs is through the form directly under this section on the site page.
@@ -474,6 +473,15 @@ I used postgres as the database because the data is relational and heroku serves
 * shoe shop
 * sale
 * special offer
+
+# E-commerce Business Model
+This site is designed for women who love shoes. They can find comfortable and unique styles for any ocassion. The user is also able to subscribe the the newsletter to receive news about the store.
+
+## Facebook Business Page
+Below are screenshots of the Funky Feet Facebook page. This page gives users the oppertunity to see extra updates outside of the website. The facebook page can be viewed here [Facebook](https://www.facebook.com/Funky-Feet-100119349392932)
+
+![Facebook1](https://github.com/KateEllen/shoe_shop/blob/main/media/facebook1.png)
+![Facebook2](https://github.com/KateEllen/shoe_shop/blob/main/media/facebook2.png)
 
 ### Sitemap
 ![Sitemap](https://github.com/KateEllen/shoe_shop/blob/main/output.png)
