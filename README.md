@@ -26,9 +26,6 @@ Below are screenshots of the Funky Feet Facebook page. This page gives users the
 ![Facebook1](https://github.com/KateEllen/shoe_shop/blob/main/media/facebook1.png)
 ![Facebook2](https://github.com/KateEllen/shoe_shop/blob/main/media/facebook2.png)
 
-
-
-
 ### Importance and Feasibility chart
 
 | Opportunity/Problem                                                    | Importance | Viability/Feasibility |
@@ -305,6 +302,9 @@ The palette of colors for the site is simple, the main colors are black and whit
     * Date and time the comment was added
     * Edit/Delete comment
     * Leave a comment
+![Add Post](https://github.com/KateEllen/shoe_shop/blob/main/media/add-blog.png)
+![Blog](https://github.com/KateEllen/shoe_shop/blob/main/media/blog.png)
+
 
 ### Features on the Comments 
 
