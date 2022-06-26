@@ -428,7 +428,7 @@ I used postgres as the database because the data is relational and heroku serves
 | timestamp | CharField  | DateTimeField  | Required, auto populated |
 
 # E-commerce Business Model
-
+This site is for 
 
 ## Facebook Business Page
 
@@ -436,12 +436,10 @@ I used postgres as the database because the data is relational and heroku serves
 
 
 ## SEO Strategy
+I used sites like [Zappos](https://www.zappos.com/) and [Office](https://www.office.co.uk/)to deicde what keywords I would need. 
 
-### Keywords
-### Description
-### Title
-### Relevant Content
 ### Sitemap
+![Sitemap](https://github.com/KateEllen/shoe_shop/blob/main/output.png)
 
 ### Robots.txt
 
