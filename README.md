@@ -280,6 +280,22 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 * View Blog Posts
 * Post Title gives information for the user about what the blog post is about.
+* Post Link
+  * A link to redirect the users back to the Explore page with all the posts available.
+* Date and Time Post was Published
+  * Date and time stamp and the profile name of the super user who created the post entry.
+* Post Content/Body
+  * The content of the blog that has been included by the super user.
+* Comments
+  * The comments section shows users responses to the blog.
+  * Only registered users can post comments.
+  * To post comments to the blogs is through the form directly under this section on the site page.
+  * When no comments have been add it will display 'No Comments Yet'.
+  * This will include:
+    * Comment title
+    * Date and time the comment was added
+    * Edit/Delete comment
+    * Leave a comment
 
 ### Features on the Comments 
 
@@ -297,6 +313,7 @@ The palette of colors for the site is simple, the main colors are black and whit
 * Returns
 * Product rating
 * Live chat
+* Images for blog posts
 
 # Testing
 
