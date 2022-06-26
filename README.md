@@ -475,7 +475,6 @@ I used postgres as the database because the data is relational and heroku serves
 * sale
 * special offer
 
-- The site map 
 ### Sitemap
 ![Sitemap](https://github.com/KateEllen/shoe_shop/blob/main/output.png)
 
