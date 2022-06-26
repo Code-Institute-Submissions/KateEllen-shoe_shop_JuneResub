@@ -9,9 +9,6 @@ It is an E-Commerce site for a fictional company 'Funky Feet' which offers a var
 ![Responsive](https://github.com/KateEllen/shoe_shop/blob/main/media/responsive.png)
 ___
 
-
-## User Experience 
-
 ## Project Goals
 
 The goal of this project is to create E*Commerce store for a ladies shoe shop. 
