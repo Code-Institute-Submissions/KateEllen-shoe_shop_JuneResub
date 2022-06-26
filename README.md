@@ -456,6 +456,9 @@ I used postgres as the database because the data is relational and heroku serves
 | timestamp | CharField  | DateTimeField  | Required, auto populated |
 
 ## SEO Strategy
+
+- Each page has key words meta data= xxxx as well as a description =xxx Product detail pages include the name of the shoe being sold in the description. Key words are also in content on the home page to re-enforce to search engines that the keywords aren’t being stuffed.
+
 - I used sites like [Zappos](https://www.zappos.com/) and [Office](https://www.office.co.uk/)to deicde what keywords I would need. The keywords I selected are listed below. 
 
 * shoes
