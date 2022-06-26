@@ -28,13 +28,17 @@ Below are screenshots of the Funky Feet Facebook page. This page gives users the
 
 ### Importance and Feasibility chart
 
-| Opportunity/Problem                                                    | Importance | Viability/Feasibility |
-| :--------------------------------------------------------------------- | :--------: | :-------------------: |
-| 1. Users are able to register an account and login                     |     5      |           5           |
-| 2. Users can add, edit and remove items from their shopping bag        |     5      |           5           |
-| 3. Users are notified of their actions while interacting with the site |     5      |           4           |
-| 4. Users can search for products by keyworkds                          |     4      |           4           |
-| 5. Users can sign up to the newsletter                                 |     3      |           4           |
+| Opportunity/Problem                                                                            | Importance | Viability/Feasibility |
+|------------------------------------------------------------------------------------------------|------------|-----------------------|
+| Users are able to register an account and login                                                | 5          | 5                     |
+| Users can add, edit and remove items from their shopping bag                                   | 5          | 5                     |
+| Blog Section so users can read related articles from celeb/fashion experts concerning products | 5          | 5                     |
+| Super users can add, edit, delete blogs                                                        | 5          | 5                     |
+| Allow users to add and edit, delete their own blog comments                                    | 4          | 4                     |
+| Super users can edit any blog comments                                                         | 4          | 4                     |
+| Users can search for products by keyworkds                                                     | 4          | 5                     |
+| Users are notified of their actions while interacting with the site                            | 4          | 4                     |
+| Users can sign up to the newsletter                                                            | 3          | 4                     |
 
 ## User Stories
 
