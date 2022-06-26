@@ -9,9 +9,6 @@ It is an E-Commerce site for a fictional company 'Funky Feet' which offers a var
 ![Responsive]()
 ___
 
-## Table of Contents
-
-
 
 ## User Experience 
 
@@ -19,6 +16,14 @@ ___
 
 The goal of this project is to create E*Commerce store for a ladies shoe shop. 
 This project is for educational purposes only.
+
+# E-commerce Business Model
+This site is designed for women who love shoes. They can find comfortable and unique styles for any ocassion. The user is also able to subscribe the the newsletter to receive news about the store.
+
+## Facebook Business Page
+
+## Newsletter Signup
+
 
 ### Importance and Feasibility chart
 
@@ -427,22 +432,11 @@ I used postgres as the database because the data is relational and heroku serves
 | email     | EmailField | Logged in user | Required                 |
 | timestamp | CharField  | DateTimeField  | Required, auto populated |
 
-# E-commerce Business Model
-This site is for 
-
-## Facebook Business Page
-
-## Newsletter Signup
-
-
 ## SEO Strategy
 I used sites like [Zappos](https://www.zappos.com/) and [Office](https://www.office.co.uk/)to deicde what keywords I would need. 
 
 ### Sitemap
 ![Sitemap](https://github.com/KateEllen/shoe_shop/blob/main/output.png)
-
-### Robots.txt
-
 
 # Credits
 
