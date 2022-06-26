@@ -25,8 +25,6 @@ To validate the code the following **validation services** and **linters** were 
 * [Chrome DevTools Lighthouse]
 ![Lighthouse](https://github.com/KateEllen/shoe_shop/blob/main/media/lighthouse.png)
 
-
-
 ## Manual Testing
 
 ### Devices and browsers
