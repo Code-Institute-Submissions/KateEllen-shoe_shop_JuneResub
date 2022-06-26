@@ -342,6 +342,14 @@ It's required to have an [AWS](https://aws.amazon.com/s3/) account and a [S3 buc
 ## Database Choice
 I used postgres as the database because the data is relational and heroku serves this up realitvely easily with no cost.The models used to construct the site are outlined below:
 
+| DB Key 	         | Data Type 	   |          Purpose          	        | Form Validation                        	|
+|--------	         |:---------:	   |:-------------------------:	        |----------------------------------------	|
+| pk   	           | ObjectId  	   | unique identifier, auto generated  | None                                   	|
+| post_title   	   | CharField     | Display name of blog entry         | Required<br>Min 1 char<br>Max 50 chars 	|
+| post_content     | TextField     | Body of blog 	                    | Required                               	|
+| post_date_posted | DateTimeField | Date of blog being created 	      | Required                               	|
+| post_content     | ForeignKey    | User who created blog 	            | Required                               	|
+
 # E-commerce Business Model
 
 
