@@ -459,7 +459,21 @@ I used postgres as the database because the data is relational and heroku serves
 | timestamp | CharField  | DateTimeField  | Required, auto populated |
 
 ## SEO Strategy
-I used sites like [Zappos](https://www.zappos.com/) and [Office](https://www.office.co.uk/)to deicde what keywords I would need. 
+I used sites like [Zappos](https://www.zappos.com/) and [Office](https://www.office.co.uk/)to deicde what keywords I would need. The keywords I selected are listed below. 
+
+* shoes
+* elusive
+* unique
+* free shipping
+* ladies
+* girls
+* fashion
+* womens shoes
+* casual shoes
+* new shoes
+* shoe shop
+* sale
+* special offer
 
 ### Sitemap
 ![Sitemap](https://github.com/KateEllen/shoe_shop/blob/main/output.png)
