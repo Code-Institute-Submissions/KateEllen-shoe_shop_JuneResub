@@ -39,8 +39,6 @@ class StripeWH_Handler:
         Handle a generic/unknown/unexpected webhook event
         """
         intent = event.data.object
-        print(intent)
-        print('testing string 5')
         return HttpResponse(
             content=f'Unhandled Webhook received: {event["type"]}',
             status=200)
@@ -105,7 +103,6 @@ class StripeWH_Handler:
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
-        print(f'order_exists:{order_exists}')
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(

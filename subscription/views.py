@@ -19,7 +19,6 @@ def subscribe(email):
         'email': email,
     }
 
-    print(newData)
     headers = {'Content-type': 'application/json'}
 
     r = requests.post(
@@ -36,7 +35,6 @@ def email_list_signup(request):
         if signUpForm.is_valid():
             email = request.POST.get('email')
             response = subscribe(email)
-            print(response)
             if response['subscription'] and response['subscription']['state'] == 'inactive':  # noqa
                 messages.success(
                     request, "Subscribed, please confirm your email.")
