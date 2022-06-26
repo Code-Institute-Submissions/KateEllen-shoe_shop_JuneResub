@@ -6,7 +6,7 @@ This project has been created for educational purposes.
 
 It is an E-Commerce site for a fictional company 'Funky Feet' which offers a variety of ladies shoes for sale.
 
-![Responsive]()
+![Responsive](https://github.com/KateEllen/shoe_shop/blob/main/media/responsive.png)
 ___
 
 
@@ -459,7 +459,7 @@ I used postgres as the database because the data is relational and heroku serves
 | timestamp | CharField  | DateTimeField  | Required, auto populated |
 
 ## SEO Strategy
-I used sites like [Zappos](https://www.zappos.com/) and [Office](https://www.office.co.uk/)to deicde what keywords I would need. The keywords I selected are listed below. 
+- I used sites like [Zappos](https://www.zappos.com/) and [Office](https://www.office.co.uk/)to deicde what keywords I would need. The keywords I selected are listed below. 
 
 * shoes
 * elusive
@@ -475,6 +475,7 @@ I used sites like [Zappos](https://www.zappos.com/) and [Office](https://www.off
 * sale
 * special offer
 
+- The site map 
 ### Sitemap
 ![Sitemap](https://github.com/KateEllen/shoe_shop/blob/main/output.png)
 
