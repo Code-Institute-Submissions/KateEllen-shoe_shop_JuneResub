@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os 
+import os
 import dj_database_url
 if os.path.exists("env.py"):
     import env
@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['funky-feet.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'profiles',
     'blog',
 
-    # Other 
+    # Other
     'crispy_forms',
     'storages',
     'subscription',
@@ -137,9 +137,6 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

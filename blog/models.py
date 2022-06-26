@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Post(models.Model):
     post_title = models.CharField(max_length=100)
     post_content = models.TextField()
@@ -17,6 +18,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.post_title
+
 
 class Comment(models.Model):
     post_id = models.ForeignKey('Post', null=True,
@@ -35,5 +37,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.comment_title
-
-
