@@ -21,8 +21,12 @@ This project is for educational purposes only.
 This site is designed for women who love shoes. They can find comfortable and unique styles for any ocassion. The user is also able to subscribe the the newsletter to receive news about the store.
 
 ## Facebook Business Page
+Below are screenshots of the Funky Feet Facebook page. This page gives users the oppertunity to see extra updates outside of the website. The facebook page can be viewed here [Facebook](https://www.facebook.com/Funky-Feet-100119349392932)
 
-## Newsletter Signup
+![Facebook1](https://github.com/KateEllen/shoe_shop/blob/main/media/facebook1.png)
+![Facebook2](https://github.com/KateEllen/shoe_shop/blob/main/media/facebook2.png)
+
+
 
 
 ### Importance and Feasibility chart
