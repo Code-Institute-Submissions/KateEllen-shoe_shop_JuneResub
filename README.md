@@ -273,6 +273,7 @@ The palette of colors for the site is simple, the main colors are black and whit
 * Complete Order Button 
   * The order for the user is processed. 
   * Generates a confirmation email that is sent to the email address provided in the checkout form.
+  ![Email confirmation](https://github.com/KateEllen/shoe_shop/blob/main/media/email.png)
 
 * Card Charge Warning 
 * Reminder for the users to tell them that their card will be charged with the stated amount.
