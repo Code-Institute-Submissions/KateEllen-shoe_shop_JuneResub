@@ -302,9 +302,15 @@ The palette of colors for the site is simple, the main colors are black and whit
     * Date and time the comment was added
     * Edit/Delete comment
     * Leave a comment
-![Add Post](https://github.com/KateEllen/shoe_shop/blob/main/media/add-blog.png)
+
 ![Blog](https://github.com/KateEllen/shoe_shop/blob/main/media/blog.png)
 
+### Add Post (superuser only)
+Super user's can create blog posts.
+![Add Post](https://github.com/KateEllen/shoe_shop/blob/main/media/add-blog.png)
+
+### Delete Post (superuser only)
+Super user's can delete their blog posts. 
 
 ### Features on the Comments 
 
@@ -313,10 +319,8 @@ The palette of colors for the site is simple, the main colors are black and whit
 * Read comments under specific blog post
 * Edit comments you have left
 * Delete comments you have left
+![Comments](https://github.com/KateEllen/shoe_shop/blob/main/media/comments.png)
 
-### Add Post (superuser only)
-
-### Delete Post (superuser only)
 
 ## Future features 
 * Returns
