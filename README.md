@@ -336,7 +336,7 @@ Super user's can edit their blog posts.
 * Edit comments you have left
 ![Edit Comments](https://github.com/KateEllen/shoe_shop/blob/main/media/edit-comment.png)
 
-* Delete comments you have left
+* Superuser can delete comments you have left
 ![Delete Comments](https://github.com/KateEllen/shoe_shop/blob/main/media/delete-comment.png)
 
 ## Future features 
