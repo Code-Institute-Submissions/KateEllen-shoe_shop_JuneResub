@@ -163,6 +163,9 @@ The palette of colors for the site is simple, the main colors are black and whit
 * Sign In Button 
   *  Authenticates the user and return to the home page.
 
+* Unique Email Required. 
+  * ![Unique Email](https://github.com/KateEllen/shoe_shop/blob/main/media/unique-email.png)
+
 * Forgotten Password Link 
   * Users can reset their password if they've forgotten it. An email containing a link that directs users to simple instructions on how to reset their password. 
     ![Sign In](https://github.com/KateEllen/shoe_shop/blob/main/media/login.png)
@@ -273,6 +276,14 @@ The palette of colors for the site is simple, the main colors are black and whit
 * The user have an input box and a button to subscribe.
 * The user will be receiving an email in their inbox.
 
+### Comments 
+
+### Blog
+
+### Add Post (superuser only)
+
+### Delete Post (superuser only)
+
 ## Future features 
 * Returns
 * Product rating
@@ -303,7 +314,7 @@ It's required to have an [AWS](https://aws.amazon.com/s3/) account and a [S3 buc
 
 
 ## Database Choice
-I used postgres as the database because the data is relational and heroku serves this up realitvely easily with no cost.
+I used postgres as the database because the data is relational and heroku serves this up realitvely easily with no cost.The models used to construct the site are outlined below:
 
 # E-commerce Business Model
 
