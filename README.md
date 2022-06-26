@@ -290,6 +290,7 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 * CRUD functionality
 * View Blog Posts
+![Blog](https://github.com/KateEllen/shoe_shop/blob/main/media/blog-list.png)
 * Post Title gives information for the user about what the blog post is about.
 * Post Link
   * A link to redirect the users back to the Explore page with all the posts available.
@@ -310,22 +311,33 @@ The palette of colors for the site is simple, the main colors are black and whit
 
 ![Blog](https://github.com/KateEllen/shoe_shop/blob/main/media/blog.png)
 
-### Add Post (superuser only)
+### Add Post **(superuser only)**
 Super user's can create blog posts.
 ![Add Post](https://github.com/KateEllen/shoe_shop/blob/main/media/add-blog.png)
 
-### Delete Post (superuser only)
-Super user's can delete their blog posts. 
+### Delete Post **(superuser only)**
+Super user's can delete their blog posts.
+![Delete Post](https://github.com/KateEllen/shoe_shop/blob/main/media/delete-blog.png) 
+
+### Edit Post **(superuser only)**
+Super user's can edit their blog posts. 
+![Edit Post](https://github.com/KateEllen/shoe_shop/blob/main/media/edit-blog.png)
 
 ### Features on the Comments 
 
 * CRUD functionality
+
 * Create comments
+![Create Comments](https://github.com/KateEllen/shoe_shop/blob/main/media/create-comment.png)
+
 * Read comments under specific blog post
-* Edit comments you have left
-* Delete comments you have left
 ![Comments](https://github.com/KateEllen/shoe_shop/blob/main/media/comments.png)
 
+* Edit comments you have left
+![Edit Comments](https://github.com/KateEllen/shoe_shop/blob/main/media/edit-comment.png)
+
+* Delete comments you have left
+![Delete Comments](https://github.com/KateEllen/shoe_shop/blob/main/media/delete-comment.png)
 
 ## Future features 
 * Returns
