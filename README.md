@@ -276,9 +276,18 @@ The palette of colors for the site is simple, the main colors are black and whit
 * The user have an input box and a button to subscribe.
 * The user will be receiving an email in their inbox.
 
-### Comments 
+### Features on the Blog
 
-### Blog
+* View Blog Posts
+* Post Title gives information for the user about what the blog post is about.
+
+### Features on the Comments 
+
+* CRUD functionality
+* Creat comments
+* Read comments under specific blog post
+* Edit comments you have left
+* Delete comments you have left
 
 ### Add Post (superuser only)
 
